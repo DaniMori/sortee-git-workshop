@@ -1,8 +1,12 @@
 
-# Respository `vc-workshop`
+# Respository `sortee-git-workshop`
 
-Version control for scientific workflows workshop at Division of
-Insurance Medicine, Karolinska Institutet
+Workshop “Reproducible research and collaboration in git and GitHub” at
+the 2024 SORTEE Conference.
+
+Forked (explicitly) and adapted from the repository “Version control for
+scientific workflows workshop”, project for a workshop ran at the
+Division of Insurance Medicine, Karolinska Institutet, on June 20, 2023.
 
 # License
 
@@ -24,7 +28,8 @@ Dataset `nwtco` from the R [survival
 package](https://cran.r-project.org/package=survival) v3.5-5, originally
 from:
 
-<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="refs" class="references csl-bib-body hanging-indent"
+entry-spacing="0">
 
 <div id="ref-breslow_design_1999" class="csl-entry">
 
@@ -93,7 +98,7 @@ instructions](https://book.cds101.com/using-rstudio-server-to-clone-a-github-rep
 specified. The URL that must be entered into the `Repository URL` text
 box is:
 
-    https://github.com/DaniMori/vc-workshop.git
+    https://github.com/DaniMori/sortee-git-workshop.git
 
 After cloning the repository, the Rstudio project will open
 automatically in the Rstudio IDE. If it doesn’t, or you want to return
@@ -131,7 +136,7 @@ renv::restore()
 
 The file structure of this repository is as follows:
 
-    vc-workshop
+    sortee-git-workshop
     |
     |--- dat          (To store input datasets; must NEVER be checked-in to Github)
     |
