@@ -1,8 +1,12 @@
 
-# Respository `vc-workshop`
+# Respository `sortee-git-workshop`
 
-Version control for scientific workflows workshop at Division of
-Insurance Medicine, Karolinska Institutet
+Workshop “Reproducible research and collaboration in git and GitHub” at
+the 2024 SORTEE Conference.
+
+Forked (explicitly) and adapted from the repository “Version control for
+scientific workflows workshop”, project for a workshop ran at the
+Division of Insurance Medicine, Karolinska Institutet, on June 20, 2023.
 
 # License
 
@@ -24,7 +28,8 @@ Dataset `nwtco` from the R [survival
 package](https://cran.r-project.org/package=survival) v3.5-5, originally
 from:
 
-<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="refs" class="references csl-bib-body hanging-indent"
+entry-spacing="0">
 
 <div id="ref-breslow_design_1999" class="csl-entry">
 
@@ -53,35 +58,36 @@ Origin of all the image files attributed in the corresponding slides in
 
 ## Software components
 
-- Install [R version
-  4.3.0](https://cran.rstudio.com/bin/windows/base/old/4.3.0/): In
+Start by installing the following software components:
+
+- [R version
+  4.4.1](https://cran.rstudio.com/bin/windows/base/old/4.4.1/): In
   Windows, using the [binary
-  installer](https://cran.rstudio.com/bin/windows/base/old/4.3.0/R-4.3.0-win.exe)
+  installer](https://cran.rstudio.com/bin/windows/base/old/4.4.1/R-4.4.1-win.exe)
   is recommended.
 
 <!-- -->
 
-- [Rstudio
-  Desktop](https://www.rstudio.com/products/rstudio/download/#download):
+- [Rstudio Desktop](https://posit.co/download/rstudio-desktop/):
   Although not strictly necessary, it is recommended to install the
-  Rstudio IDE; for strict reproducibility, use build [2023.03.1+446 for
+  Rstudio IDE; for strict reproducibility, use build [2024.04.2+764 for
   Windows
-  10/11](https://download1.rstudio.org/electron/windows/RStudio-2023.03.1-446.exe).
+  10/11](https://download1.rstudio.org/electron/windows/RStudio-2024.04.2-764.exe).
 
 <!-- -->
 
 - [Quarto publishing system](https://quarto.org/): An additional
   component used by Rstudio to generate and publish literate computing
-  outputs. For strict reproducibility please use build 1.3.353; On
+  outputs. For strict reproducibility please use build 1.4.555; On
   Windows, use [the 64-bit
-  installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.3.353/quarto-1.3.353-win.msi).
+  installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.555/quarto-1.4.555-win.msi).
 
 <!-- -->
 
 - [Git client](https://git-scm.com/download): Install the Git client in
   order to be able to clone locally the project repository. On Windows,
   use [the 64-bit Windows
-  installer](https://github.com/git-for-windows/git/releases/download/v2.40.1.windows.1/Git-2.40.1-64-bit.exe).
+  installer](https://github.com/git-for-windows/git/releases/download/v2.45.2.windows.1/Git-2.45.2-64-bit.exe).
 
 ## Installing the project locally
 
@@ -93,7 +99,14 @@ instructions](https://book.cds101.com/using-rstudio-server-to-clone-a-github-rep
 specified. The URL that must be entered into the `Repository URL` text
 box is:
 
-    https://github.com/DaniMori/vc-workshop.git
+    https://github.com/DaniMori/sortee-git-workshop.git
+
+**IMPORTANT:** It is totally unrecommended to clone a git repository
+inside a cloud storage folder (e.g., Dropbox, OneDrive). Please note
+that GitHub serves the purpose of backing up the repository, so no cloud
+storage is necessary. Similarly, cloning the repository in a network
+folder may cause problems with the `renv` environment (see below); do it
+at your own risk!
 
 After cloning the repository, the Rstudio project will open
 automatically in the Rstudio IDE. If it doesn’t, or you want to return
@@ -112,8 +125,9 @@ ready for restoring the environment.
 ## Restoring the environment
 
 The reproducible environment created by `renv` must be restored to
-install all the packages this project needs to be built properly. In
-order to this, you will need to install package `renv` first:
+install all the packages this project needs to be built properly. If
+`renv` does not initialize automatically (check the console for messages
+about this), you will need to manually install the package first:
 
 ``` r
 install.packages("renv")
@@ -124,14 +138,14 @@ button in Rstudio’s “Packages” tab to restore the environment.
 Alternatively, you can type in the console:
 
 ``` r
-renv::restore()
+renv::restore(confirm = FALSE)
 ```
 
 # Repository structure
 
 The file structure of this repository is as follows:
 
-    vc-workshop
+    sortee-git-workshop
     |
     |--- dat          (To store input datasets; must NEVER be checked-in to Github)
     |
