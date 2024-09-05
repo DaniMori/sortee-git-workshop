@@ -72,27 +72,38 @@ Origin of all the image files attributed in the corresponding slides in
 
 ## Software components
 
-- Install [R version 4.3.0][R]:
+Start by installing the following software components:
+
+```{r software-versions}
+#| echo: false
+r_version     <- paste(version$major, version$minor, sep = '.')
+rs_version    <- rstudioapi::versionInfo()$long_version
+rs_version_dl <- rs_version |> stringr::str_replace('\\+', '-')
+q_version     <- quarto::quarto_version()
+git_version   <- gitr::git_version()
+```
+
+- [R version `r r_version`][R]:
   In Windows, using the [binary installer][inst] is recommended.
 
-[R]: https://cran.rstudio.com/bin/windows/base/old/4.3.0/
-[inst]: https://cran.rstudio.com/bin/windows/base/old/4.3.0/R-4.3.0-win.exe
+[R]: https://cran.rstudio.com/bin/windows/base/old/`r r_version`/
+[inst]: https://cran.rstudio.com/bin/windows/base/old/`r r_version`/R-`r r_version`-win.exe
 
 - [Rstudio Desktop][RS]: Although not strictly necessary, it is recommended
   to install the Rstudio IDE; for strict reproducibility, use build
-  [2023.03.1+446 for Windows 10/11][RSv].
+  [`r rs_version` for Windows 10/11][RSv].
 
-[RS]: https://www.rstudio.com/products/rstudio/download/#download
+[RS]: https://posit.co/download/rstudio-desktop/
 
-[RSv]: https://download1.rstudio.org/electron/windows/RStudio-2023.03.1-446.exe
+[RSv]: https://download1.rstudio.org/electron/windows/RStudio-`r rs_version_dl`.exe
 
 - [Quarto publishing system][Q]: An additional component used by Rstudio to
 generate and publish literate computing outputs. For strict reproducibility
-please use build 1.3.353; On Windows, use [the 64-bit installer][QW].
+please use build `r q_version`; On Windows, use [the 64-bit installer][QW].
 
 [Q]: https://quarto.org/
 
-[QW]: https://github.com/quarto-dev/quarto-cli/releases/download/v1.3.353/quarto-1.3.353-win.msi
+[QW]: https://github.com/quarto-dev/quarto-cli/releases/download/v`r q_version`/quarto-`r q_version`-win.msi
 
 - [Git client][G]: Install the Git client in order to be able to clone locally
   the project repository.
@@ -100,7 +111,7 @@ please use build 1.3.353; On Windows, use [the 64-bit installer][QW].
 
 [G]: https://git-scm.com/download
 
-[GW]: https://github.com/git-for-windows/git/releases/download/v2.40.1.windows.1/Git-2.40.1-64-bit.exe
+[GW]: https://github.com/git-for-windows/git/releases/download/v`r git_version`.windows.1/Git-`r git_version`-64-bit.exe
 
 ## Installing the project locally
 
@@ -116,6 +127,12 @@ https://github.com/DaniMori/sortee-git-workshop.git
 ```
 
 [CR]: https://book.cds101.com/using-rstudio-server-to-clone-a-github-repo-as-a-new-project.html#step---2
+
+**IMPORTANT:** It is totally unrecommended to clone a git repository inside a
+cloud storage folder (e.g., Dropbox, OneDrive). Please note that GitHub serves
+the purpose of backing up the repository, so no cloud storage is necessary.
+Similarly, cloning the repository in a network folder may cause problems with
+the `renv` environment (see below); do it at your own risk!
 
 After cloning the repository,
 the Rstudio project will open automatically in the Rstudio IDE.
@@ -135,8 +152,9 @@ activate the `renv` package and make it ready for restoring the environment.
 ## Restoring the environment
 
 The reproducible environment created by `renv` must be restored to install all
-the packages this project needs to be built properly. In order to this, you will
-need to install package `renv` first:
+the packages this project needs to be built properly. If `renv` does not
+initialize automatically (check the console for messages about this), you will
+need to manually install the package first:
 
 ```r
 install.packages("renv")
@@ -147,7 +165,7 @@ button in Rstudio's "Packages" tab to restore the environment. Alternatively,
 you can type in the console:
 
 ```r         
-renv::restore()
+renv::restore(confirm = FALSE)
 ```
 
 # Repository structure
