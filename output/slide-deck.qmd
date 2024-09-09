@@ -28,7 +28,7 @@ institute:   |
     <tr>
       <td>
         <left>
-          [![](../www/LOGO UNED VECTORIAL.AI){height="75"}](https://www.uned.es/universidad/facultades/psicologia/)
+          [![](../www/Logo Psicologia.gif){height="75"}](https://www.uned.es/universidad/facultades/psicologia/)
         </left>
       </td>
       <td>
