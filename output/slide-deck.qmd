@@ -994,7 +994,7 @@ Taken from [makeameme.org](https://makeameme.org/meme/git-merge-no)
 
 ::: aside
 ::: fragment
-\*: Except (1), but even exceptions to (3)
+\*: Even exceptions to (3), but never (1) or (2)
 :::
 :::
 
@@ -1118,11 +1118,7 @@ it in the current version in our file system.
 ::: {#title-slide .center}
 ### Many thanks!
 
-<br> <br>
-
-### Tack så mycket!
-
-<br> <br>
+<br> <br> <br>
 
 ### ¡Muchas gracias!
 :::
