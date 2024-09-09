@@ -1,12 +1,12 @@
 ---
 title:       "Version control with git + GitHub for scientific workflows"
-date:        2023-06-20
+date:        2024-10-15
 date-format: long
 author:      |
   <table>
     <tr>
       <td>Daniel Morillo, Ph.D.</td>
-      <td>Emma Pettersson</td>
+      <td>Kevin Bairos-Novak</td>
     </tr>
     <tr>
       <td>
@@ -17,15 +17,27 @@ author:      |
       </td>
       <td>
         <center>
-          [![](../www/github-logo.png){height="50"}](https://github.com/emmapett/)&emsp;
+          [![](../www/github-logo.png){height="50"}](https://github.com/kevolve/)&emsp;
+          [![](../www/orcid.png){height="50"}](https://orcid.org/0000-0002-0152-1452)
         </center>
       </td>
     </tr>
   </table>
-# TODO: verify Emma's info & links
 institute:   |
-  [![](../www/cibersam.png){height="75"}](https://www.cibersam.es/) &emsp;&emsp;
-  [![](../www/ki-logo.jpg){height="85"}](https://ki.se/)
+  <table>
+    <tr>
+      <td>
+        <left>
+          [![](../www/LOGO UNED VECTORIAL.AI){height="75"}](https://www.uned.es/universidad/facultades/psicologia/)
+        </left>
+      </td>
+      <td>
+        <right>
+          [![](<!--# TODO: UQ Logo -->){height="75"}](<!-- # TODO: UQ URL -->)
+        </right>
+      </td>
+    </tr>
+  </table>
 format:
   revealjs:
     auto-stretch:            true
