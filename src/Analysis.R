@@ -60,10 +60,12 @@ penguins_data <- penguins_data |> drop_na()
 
 ## Create descriptive statistics table:
 # descriptive_table <- penguins_data |> tbl_summary()
+# descriptive_table
 ## TODO: Uncomment if using {gtsummary}
 
 ## Create contingency table of sex and species:
 # contingency_table <- penguins_data |> tbl_cross(row = sex, col = species)
+# contingency_table
 ## TODO: Uncomment if using {gtsummary}
 
 # Statistical modeling and inference: ----
@@ -73,4 +75,5 @@ bodymass_fit <- lm(body_mass_g ~ sex * species, data = penguins_data)
 
 # NOTE: Output table not created, as `gtsummary` package is too heavy
 # bodymass_coef_table <- bodymass_fit |> tbl_regression()
+# bodymass_coef_table
 ## TODO: Uncomment if using {gtsummary}
