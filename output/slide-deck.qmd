@@ -228,7 +228,7 @@ Consider which ones you may need, and which ones you will want to delete.
 
 Let's not pay much attention to the files, by now (we will see later)
 
-`.gitignore` files in subfolders are intended to "create the folder structure"
+".gitignore" files in subfolders are intended to "create the folder structure"
 (we will see later on what these files are)
 :::
 
@@ -394,21 +394,21 @@ try a different local folder name
 
 ## Explore your local repo
 
--   `.git`: Home of your git repository
+-   ".git": Home of your git repository
 
 -   Folders
 
 ::: {.fragment .nonincremental}
 -   Files:
-    -   `.gitignore`
+    -   ".gitignore"
 
-    -   `README.md` and `README.Rmd`
+    -   "README.md" and "README.Rmd"
 
-    -   `LICENSE.md`
+    -   "LICENSE.md"
 
-    -   `.Rprofile`
+    -   ".Rprofile"
 
-    -   `renv.lock`
+    -   "renv.lock"
 :::
 
 ::: notes
@@ -417,7 +417,7 @@ project)
 
 In tab "Files" in Rstudio, or in the Windows explorer
 
-`.git`: Important to not mess with it (in the Windows explorer, note that it is
+".git": Important to not mess with it (in the Windows explorer, note that it is
 a hidden folder). If broken, delete and clone again. Manages all the files in
 the repository folder and subfolders; this is why we should never create "nested
 repositories".
@@ -425,14 +425,14 @@ repositories".
 
 E.g.: Only R code, delete "output", "www/YYYY-mm-dd_Meeting_template.md", etc.
 
-`.gitignore` file will tell "git" that certain files must be "ignored"
+".gitignore" file will tell "git" that certain files must be "ignored"
 
-`README.md` is the "landing-page documentation" of the project. Consider editing
-directly if you want, and deleting `README.Rmd`?
+"README.md" is the "landing-page documentation" of the project. Consider editing
+directly if you want, and deleting "README.Rmd"?
 
-`.Rprofile` only runs a script (we will see later what and why)
+".Rprofile" only runs a script (we will see later what and why)
 
-`renv.lock` is the "R environment" file
+"renv.lock" is the "R environment" file
 :::
 
 ## R environment (I)
@@ -454,17 +454,17 @@ Have you noticed...?
 ```
 
 ::: notes
-Created by `{renv}`: `.Rprofile` is run everytime and R session starts
+Created by {renv}: ".Rprofile" is run everytime and R session starts
 
-(OPEN `.Rprofile`)
+(OPEN ".Rprofile")
 
-The script `renv/activate.R` is sourced, initializing package `{renv}`. This
+The script "renv/activate.R" is sourced, initializing package {renv}. This
 package creates and manages an R environment locally.
 :::
 
 ## R environment (II)
 
-`renv.lock` file:
+"renv.lock" file:
 
 ```{embed, file="../renv.lock"}
 ```
@@ -554,7 +554,7 @@ Type in your email (also mind the double quotes). Better use "User name" at
 -   Delete unnecessary folders / files
 
 ::: {.nonincremental .fragment}
--   Edit `README.md`:
+-   Edit "README.md":
 
     -   Change \<repository-name\> by your repo (lines 2 & 113)
 
@@ -566,9 +566,9 @@ Type in your email (also mind the double quotes). Better use "User name" at
 :::
 
 ::: notes
-IMPORTANT!! Do not delete `.Rprofile`, `renv.lock` or the `renv` folder
+IMPORTANT!! Do not delete ".Rprofile", "renv.lock" or the "renv" folder
 
-Delete: `www`
+Delete: "www"
 
 Note that this results in deleting the file(s) within, not the folder
 
@@ -579,7 +579,7 @@ Other candidates to delete? (Up to each one)
 README file: Information for "visitors" of your repository. Useful if you plan
 to make it public at some point. **Give some time to get familiar with it!**
 
-Repo URL must contain the `.git` suffix!!
+Repo URL must contain the ".git" suffix!!
 
 License:
 
@@ -727,7 +727,7 @@ Then try the following:
 
 -   Open someone else's repo (\*)
 
--   Open `www/.gitignore`
+-   Open "www/.gitignore"
 
 ::: incremental
 -   Click on "Pull" in the "Git" tab
@@ -833,7 +833,7 @@ OR
 
 -   copy ***a script of you own***
 
-to the `src` folder of your local repository
+to the "src" folder of your local repository
 :::
 
 -   Install necessary packages and "Snapshot Library..."
@@ -841,7 +841,7 @@ to the `src` folder of your local repository
 -   Stage and commit your changes
 
 ::: notes
-Snapshot library: The new libraries will be added to the `renv.lock`
+Snapshot library: The new libraries will be added to the "renv.lock"
 :::
 
 ## Versioning new files (and II)
@@ -855,17 +855,17 @@ OR
 
 -   copy ***a data file of your own***
 
-to the `dat` folder of your local repository
+to the "dat" folder of your local repository
 :::
 
 -   Why doesn't it show up in the "Git" tab?
 
--   How would you add a file in `dat` to your repository?
+-   How would you add a file in "dat" to your repository?
 
 ::: notes
-The `dat` folder is ignored (i.e. any file whose path "starts with" that folder)
+The "dat" folder is ignored (i.e. any file whose path "starts with" that folder)
 
-The line in `.gitignore` can be commented (with a \# in front) or deleted, the
+The line in ".gitignore" can be commented (with a \# in front) or deleted, the
 file staged, and then the line uncommented again.
 
 It can also be done in the terminal (but no need to learn the commands)
@@ -881,7 +881,7 @@ It can also be done in the terminal (but no need to learn the commands)
 <br>
 
 ::: fragment
--   Change the file path in line 11 of `src/Analysis.R` to point to the dataset:
+-   Change the file path in line 15 of "src/Analysis.R" to point to the dataset:
 
 ``` r
 DATASET_DIR <- "dat"
@@ -908,7 +908,7 @@ Use "relative paths" and "user home" to point to files:
 
 ::: fragment
 ::: callout-note
-You can check "absolute paths" `normalizePath()`:
+You can check *absolute paths* w. `normalizePath()`:
 
 ``` {.r code-line-numbers="1-3|5-6|8-9"}
 # Path relative to working directory:
@@ -978,7 +978,7 @@ Taken from [makeameme.org](https://makeameme.org/meme/git-merge-no)
 
 5.  Your own work
 
-6.  Environment (`{renv}`) files, if necessary
+6.  Environment ({renv}) files, if necessary
 
 7.  Anything else ***necessary to reproduce*** your outcomes (\*)
 
@@ -989,7 +989,7 @@ Taken from [makeameme.org](https://makeameme.org/meme/git-merge-no)
 :::
 
 ::: notes
-7.  E.g. the `renv.lock` file, which stores the environment state
+7.  E.g. the "renv.lock" file, which stores the environment state
 :::
 
 ## Viewing your history
