@@ -35,7 +35,7 @@ originally from:
 ### Pictures
 
 Origin of all the image files attributed in the corresponding slides in
-[`output/slide-deck.qmd`](output/slide-deck.qmd).
+[“output/slide-deck.qmd”](output/slide-deck.qmd).
 
 # Project installation
 
@@ -88,28 +88,28 @@ box is:
 inside a cloud storage folder (e.g., Dropbox, OneDrive). Please note
 that GitHub serves the purpose of backing up the repository, so no cloud
 storage is necessary. Similarly, cloning the repository in a network
-folder may cause problems with the `renv` environment (see below); do it
+folder may cause problems with the {renv} environment (see below); do it
 at your own risk!
 
 After cloning the repository, the Rstudio project will open
 automatically in the Rstudio IDE. If it doesn’t, or you want to return
 later to the project in Rstudio, you can do so by double clicking on the
-file `rstudio_project.Rproj` that has been created in the project folder
+file “rstudio_project.Rproj” that has been created in the project folder
 when cloning the repository.
 
 **NOTE:** It is common practice to avoid using and versioning
-`.Rprofile` files. However, this project uses [package
-`renv`](https://cran.r-project.org/package=renv) to create a
-reproducible environment, which needs the `.Rprofile` file that lives in
+“.Rprofile” files. However, this project uses [package
+{renv}](https://cran.r-project.org/package=renv) to create a
+reproducible environment, which needs the “.Rprofile” file that lives in
 the root directory of the project. **Please DO NOT delete or edit this
-file**; it will install and activate the `renv` package and make it
+file**; it will install and activate the {renv} package and make it
 ready for restoring the environment.
 
 ## Restoring the environment
 
-The reproducible environment created by `renv` must be restored to
+The reproducible environment created by {renv} must be restored to
 install all the packages this project needs to be built properly. If
-`renv` does not initialize automatically (check the console for messages
+{renv} does not initialize automatically (check the console for messages
 about this), you will need to manually install the package first:
 
 ``` r
