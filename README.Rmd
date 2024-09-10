@@ -40,14 +40,14 @@ by [Daniel Morillo][profile] and licensed under the
 
 [profile]: https://github.com/DaniMori
 
-### Dataset [`dat/breslow_chatterjee_1999.csv`][ds]
+### Dataset ["dat/penguins.csv"][ds]
 
-[ds]: dat/breslow_chatterjee_1999.csv
+[ds]: dat/penguins.csv
 
-Dataset `nwtco` from the R [survival package][survival]
-v3.5-5, originally from:
+Dataset `penguins` from the R [{palmerpenguins} package][palmerpenguins]
+v0.1.1, originally from:
 
-[survival]: https://cran.r-project.org/package=survival
+[palmerpenguins]: https://cran.r-project.org/package=palmerpenguins
 
 ::: {#refs}
 :::
