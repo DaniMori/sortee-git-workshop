@@ -1,4 +1,4 @@
-## ----load-packages----
+## ----packages----
 library(readr)
 library(dplyr)
 library(forcats)
@@ -17,6 +17,8 @@ DATASET_PATH <- file.path(DATASET_DIR, "penguins.csv")
 
 ## ----main----
 
+## ----load-data----
+
 # Data preprocessing: ----
 
 ## Read dataset:
@@ -30,6 +32,8 @@ penguins_data <- read_csv(
     .default = col_double()
   )
 )
+
+## ----preprocess-data----
 
 ## Recode values:
 penguins_data <- penguins_data |>
@@ -54,7 +58,7 @@ penguins_data <- penguins_data |> set_variable_labels(
 penguins_data <- penguins_data |> drop_na()
 
 
-# Descriptive analysis: ----
+## ----descriptives----
 
 # NOTE: Descriptives not computed, as `gtsummary` package is too heavy
 
@@ -68,7 +72,8 @@ penguins_data <- penguins_data |> drop_na()
 # contingency_table
 ## TODO: Uncomment if using {gtsummary}
 
-# Statistical modeling and inference: ----
+
+## ----modeling----
 
 bodymass_fit <- lm(body_mass_g ~ sex * species, data = penguins_data)
 ## TODO: Add covariates maybe?
