@@ -52,15 +52,6 @@ v0.1.1, originally from:
 ::: {#refs}
 :::
 
-### Script [`src/Analysis.R`][script]
-
-[script]: src/Analysis.R
-
-Adapted from the [`nwtco` help page][nwtco] of the R [survival package][survival]
-v3.5-5.
-
-[nwtco]: https://www.rdocumentation.org/packages/survival/versions/3.5-5/topics/nwtco
-
 ### Pictures
 
 Origin of all the image files attributed in the corresponding slides in

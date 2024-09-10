@@ -32,13 +32,6 @@ originally from:
 
 </div>
 
-### Script [`src/Analysis.R`](src/Analysis.R)
-
-Adapted from the [`nwtco` help
-page](https://www.rdocumentation.org/packages/survival/versions/3.5-5/topics/nwtco)
-of the R [survival package](https://cran.r-project.org/package=survival)
-v3.5-5.
-
 ### Pictures
 
 Origin of all the image files attributed in the corresponding slides in
