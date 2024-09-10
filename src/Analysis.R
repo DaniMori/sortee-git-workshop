@@ -1,16 +1,18 @@
 ## ----load-packages----
 library(readr)
 library(dplyr)
+library(forcats)
+library(stringr)
+library(tidyr)
 library(labelled)
 # library(gtsummary) ## TODO: Install {gtsummary} if necessary
-library(survival)
 
 ## ----file-system-objects----
 
 DATASET_DIR <- "dat"
 
 # TODO: Complete path
-DATASET_PATH <- file.path(DATASET_DIR, "breslow_chatterjee_1999.csv")
+DATASET_PATH <- file.path(DATASET_DIR, "penguins.csv")
 
 
 ## ----main----
@@ -18,47 +20,38 @@ DATASET_PATH <- file.path(DATASET_DIR, "breslow_chatterjee_1999.csv")
 # Data preprocessing: ----
 
 ## Read dataset:
-study_data <- read_csv(
+penguins_data <- read_csv(
   DATASET_PATH,
-  col_types      = cols(
-    instit       = col_factor(),
-    histol       = col_factor(),
-    stage        = col_factor(levels = as.character(1:4), ordered = TRUE),
-    study        = col_factor(),
-    in.subcohort = col_logical(),
-    .default     = col_integer()
+  col_types = cols(
+    species  = col_factor(),
+    island   = col_factor(),
+    sex      = col_factor(),
+    year     = col_integer(),
+    .default = col_double()
   )
 )
 
 ## Recode values:
-study_data <- study_data |> mutate(
-  instit = instit |>
-    factor(levels = 1:2, labels = c("Favourable", "Unfavourable")),
-  histol = histol |>
-    factor(levels = 1:2, labels = c("Favourable", "Unfavourable")),
-  stage  = stage  |>
-    factor(levels = 1:4, labels = c('I', 'II', 'III', 'IV'))
-)
+penguins_data <- penguins_data |>
+  mutate(sex = sex |> fct_relabel(str_to_sentence))
 
 ## Assign labels:
-# (see https://www.rdocumentation.org/packages/survival/versions/3.5-5/topics/nwtco
+# (see https://allisonhorst.github.io/palmerpenguins/reference/penguins.html
 #   for more info):
-study_data <- study_data |> set_variable_labels(
-  instit = "Histology (from local institution)",
-  histol = "Histology (from central lab)",
-  stage  = "Disease stage",
-  study  = "Study",
-  rel    = "Relapse", # As a 0/1 integer for compatibility with {survival}
-  edrel  = "Time to relapse (days)",
-  age    = "Age (months)"
-  ## TODO: Transform `edrel` and `age` to years?
+penguins_data <- penguins_data |> set_variable_labels(
+  species           = "Penguin species",
+  island            = "Island in Palmer Archipielago",
+  bill_length_mm    = "Bill length (mm)",
+  bill_depth_mm     = "Bill depth (mm)",
+  flipper_length_mm = "Flipper length (mm)",
+  body_mass_g       = "Body mass (g)",
+  sex               = "Sex",
+  year              = "Study year"
 )
 
 
-## Filter only cases in the example in Breslow & Chatterjee (1999):
-study_data <- study_data |>
-  filter(in.subcohort)   |>
-  select(-in.subcohort)
+## Filter out cases with missing data:
+penguins_data <- penguins_data |> drop_na()
 
 
 # Descriptive analysis: ----
@@ -66,18 +59,18 @@ study_data <- study_data |>
 # NOTE: Descriptives not computed, as `gtsummary` package is too heavy
 
 ## Create descriptive statistics table:
-# descriptive_table <- study_data |> tbl_summary(include = -seqno)
+# descriptive_table <- penguins_data |> tbl_summary()
 ## TODO: Uncomment if using {gtsummary}
 
-## Create contingency table of the histologies:
-# contingency_table <- study_data |> tbl_cross(row = instit, col = histol)
+## Create contingency table of sex and species:
+# contingency_table <- penguins_data |> tbl_cross(row = sex, col = species)
 ## TODO: Uncomment if using {gtsummary}
 
 # Statistical modeling and inference: ----
 
-survival_fit <- coxph(Surv(edrel,rel) ~ histol + instit, data = study_data)
-## TODO: Add covariates?
+bodymass_fit <- lm(body_mass_g ~ sex * species, data = penguins_data)
+## TODO: Add covariates maybe?
 
 # NOTE: Output table not created, as `gtsummary` package is too heavy
-# survival_coef_table <- survival_fit |> tbl_regression()
+# bodymass_coef_table <- bodymass_fit |> tbl_regression()
 ## TODO: Uncomment if using {gtsummary}
