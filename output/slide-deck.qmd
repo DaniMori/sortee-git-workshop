@@ -58,26 +58,16 @@ knitr: true
 
 ## Setup
 
-::: nonincremental
-#### Laptop log-in:
+::: nonincremental \####
 
--   **User name:** VCW
-
--   **Password:** vcw_2023
-
-#### WI-FI:
-
--   **Name:** VCW
-
--   **Password:** vcw_2023
+#### \<SECTION\>: <!-- TODO: Split rooms comment? -->
 
 #### FOLLOW LOCALLY:
 
--   <https://bit.ly/follow-vc>
-:::
+-   <https://bit.ly/follow-vc> :::
 
 ::: notes
--   Laptop login: Make sure the keyboard is in En_UK
+-   <!-- TODO: Notes about split rooms? -->
 
 -   Follow presentation, useful for copy-pasting (tested in Chrome)
 :::
