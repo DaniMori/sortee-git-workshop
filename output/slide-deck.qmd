@@ -1069,9 +1069,6 @@ it in the current version in our file system.
 <br>
 
 ::: nonincremental
--   [Emma](https://github.com/emmapett)'s [Insurance Medicine repository
-    template](https://github.com/emmapett/IM_Template)
-
 -   [I am a Dropbox User and I Don't Get Git](https://garba.org/posts/2021/git/)
     by [Ernesto Gabarino](https://garba.org/about/me/)
 
