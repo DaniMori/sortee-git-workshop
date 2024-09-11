@@ -11,8 +11,8 @@ library(labelled)
 
 DATASET_DIR <- "dat"
 
-# TODO: Complete path
-DATASET_PATH <- file.path(DATASET_DIR, "penguins.csv")
+# TODO: Complete path with "<dataset_filename>"
+DATASET_PATH <- file.path(DATASET_DIR, "<dataset_filename>.csv")
 
 
 ## ----main----
