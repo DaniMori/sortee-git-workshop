@@ -984,7 +984,7 @@ Taken from [makeameme.org](https://makeameme.org/meme/git-merge-no)
 
 ::: aside
 ::: fragment
-\*: Even exceptions to (3), but never (1) or (2)
+\* Even exceptions to (3) (and maybe (2)), but **never** (1)
 :::
 :::
 
