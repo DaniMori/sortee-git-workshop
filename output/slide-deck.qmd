@@ -58,13 +58,13 @@ knitr: true
 
 ## Setup
 
-::: nonincremental \####
-
+::: nonincremental
 #### \<SECTION\>: <!-- TODO: Split rooms comment? -->
 
 #### FOLLOW LOCALLY:
 
--   <https://bit.ly/follow-vc> :::
+-   <https://bit.ly/gitws-follow>
+:::
 
 ::: notes
 -   <!-- TODO: Notes about split rooms? -->
@@ -827,7 +827,7 @@ But it's better to try, at least...
 <br>
 
 ::: nonincremental
--   Download <https://bit.ly/vc-script>
+-   Download <https://bit.ly/script-gitws>
 
 OR
 
@@ -849,7 +849,7 @@ Snapshot library: The new libraries will be added to the "renv.lock"
 <br>
 
 ::: nonincremental
--   Download <https://bit.ly/vc-dataset>
+-   Download <https://bit.ly/dataset-gitws>
 
 OR
 
