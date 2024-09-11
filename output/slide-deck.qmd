@@ -157,7 +157,7 @@ API](https://www.perl.com/article/112/2014/9/5/Analyzing-GitHub-with-the-search-
 ::: nonincremental
 1.  [Sign in](https://github.com/login) to your GitHub account
 
-2.  Go to <https://github.com/DaniMori/barebones-rproj-template>
+2.  Go to <https://github.com/DaniMori/rproj-template>
 
 3.  Click on "Use this template"
 
