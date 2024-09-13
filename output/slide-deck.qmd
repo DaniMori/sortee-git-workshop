@@ -373,22 +373,22 @@ R packages; other stuff e.g. LaTeX packages, TeX engine... are not versioned by
 
 ## Setting up git (\*) {.smaller}
 
-<br>
-
-Before starting...
+Before starting to use version control...
 
 1.  Go to the "Terminal" tab in Rstudio
 
 ::: {.fragment .nonincremental}
 2.  Type in:
 
-::: fragment
-``` {.bash code-line-numbers="1-2|4-5|7-8"}
+``` {.bash code-line-numbers="1-2|4-5|7-8|10-11"}
 # set a user name globally
 git config --global user.name "User name"
 
 # set an email address globally
 git config --global user.email "GitHubUser@users.noreply.github.com"
+
+# for Windows users
+git config --global core.autocrlf true
 
 # check that everything's ok
 git config --list --global
@@ -398,10 +398,9 @@ git config --list --global
 Paste in terminal with `Shift-Insert`.
 :::
 :::
-:::
 
 ::: aside
-\*: You will only have to do this once
+\*: You will only have to do this once (by computer)
 :::
 
 ::: notes
