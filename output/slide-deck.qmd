@@ -903,6 +903,10 @@ Save hours of lifetime with shortcuts (\*):
     from the [Open Source Software Project Lab
     course](https://courses.csail.mit.edu/6.S194/13/) \@ [MIT's Computer Science
     & Artificial Intelligence Laboratory](https://www.csail.mit.edu/)
+
+-   [How to Create a GitHub
+    Profile](https://github.com/amarpan/how-to-create-a-github-profile), by
+    [Amar Panjwani](https://github.com/amarpan)
 :::
 
 ## Future steps
