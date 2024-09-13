@@ -74,14 +74,14 @@ knitr: true
 
 # git + GitHub: An overview
 
-![](../www/git-github.webp){fig-align="center" height="350"}
+![](../www/git-github.jpeg){fig-align="center" height="350"}
 
 <br>
 
 ::: aside
-Taken from [git + GitHub for beginners
-I](https://medium.com/cs-note/git-and-github-for-beginners-i-tutorial-263caa01f9c3)
-\@ [Medium.com](https://medium.com/)
+Taken from [The beginner’s guide to Git &
+GitHub](https://www.freecodecamp.org/news/the-beginners-guide-to-git-github/) \@
+[freeCodeCamp](https://www.freecodecamp.org)
 :::
 
 ## What is git?
