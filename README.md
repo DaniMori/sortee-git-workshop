@@ -136,12 +136,8 @@ The file structure of this repository is as follows:
     |    |
     |    |--- minutes (To store meeting minutes)
     |
-    |--- notebooks    (Notebooks to explore data and test processes live here)
-    |
     |--- output       (Processing outputs; files must be individually "checked-in"
     |                 when necessary)
-    |
-    |--- R            (R functions created for this project live here)
     |
     |--- renv         (System library necesssary for `renv` to work. DON'T TOUCH)
     |
