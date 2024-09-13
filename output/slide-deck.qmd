@@ -407,11 +407,17 @@ Paste in terminal with `Shift-Insert`.
 The one and only time that we will open the Terminal. Why doesn't Rstudio
 provide GUI functionality for this? I don't know...
 
-Mind the double quotes; type in your name or GitHub user name. This is what will
-appear in your repo "history" when you "commit" or create versions
+Mind the double quotes; type in your name or (preferably) GitHub user name. This
+is what will appear in your repo "history" when you "commit" or create versions,
+e.g.:
+
+`git config --global user.name "DaniMori"`
 
 Type in your email (also mind the double quotes). Better use "User name" at
-"users.noreply.github.com"
+"users.noreply.github.com" (for obfuscating actual email from public exposure),
+e.g.:
+
+git config --global user.email "DaniMori\@users.noreply.github.com"
 :::
 
 ## Let's make some changes
@@ -431,28 +437,42 @@ Type in your email (also mind the double quotes). Better use "User name" at
 :::
 
 ::: notes
-IMPORTANT!! Do not delete ".Rprofile", "renv.lock" or the "renv" folder
+Delete folders "apps", "doc", "notebooks", "output", and/or "R" (give
+flexibility, depending on what they plan to add to their project)
 
-Delete: "www"
+(Note that this results in deleting the file(s) within, not the folder; in this
+case, the ".kitkeep" files. git has no notion of folders, only files.)
 
-Note that this results in deleting the file(s) within, not the folder
+Do NOT delete: "src", "dat" (both necessary later on, if they use the script and
+dataset provided), or "renv".
 
-Other candidates to delete? (Up to each one)
+IMPORTANT!! NEVER delete ".Rprofile", "renv.lock" or the "renv" folder
 
 (NEXT)
 
-README file: Information for "visitors" of your repository. Useful if you plan
-to make it public at some point. **Give some time to get familiar with it!**
+We will create a "README" file for our new project. Information for "visitors"
+of your repository. Useful if you plan to make it public at some point. **Give
+some time to get familiar with it!**
 
-Repo URL must contain the ".git" suffix!!
+We will edit "README.Rmd" (NOT "README.md"), then knit it to generate our own
+"README.md" file that will overwrite the one with the template information.
 
-License:
+NOTE: There are other sections that can be personalized (see TODOs throughout).
 
--   Change "template" by "project" (line 8)
+NOTE: The lines where the "Description of unused folders" is may change when
+editing the "repository description" in the previous step.
 
--   Delete bullet points
+IMPORTANT: HIGHLIGHT this is *just a text file*; git versions (easily) text
+files, and keeps track of the changes. Scripts (and ".R" files in general),
+notebooks, and Quarto documents are **also text files** (just characters).
 
--   Convert "citation" to "normal text"
+(NEXT)
+
+Press "knit" button to generate "README.md". This overwrites the template's own
+"README.md" file, creating one for their own repository.
+
+It has installation instructions and all the necessary information (e.g.,
+license file; a brief comment on licensing may be in place here).
 :::
 
 # Versioning in git
@@ -481,7 +501,7 @@ I)](https://blogs.cisco.com/learning/git-for-network-engineers-series-the-basics
 ::: notes
 -   Deleted folders "do not exist". It only considers "deleted files".
 
--   Deleting an empty folders does not show anything in the Git tab.
+-   Deleting an empty folder will not show anything in the Git tab.
 
 -   Deleting a non-empty folder shows one line for each deleted file in the Git
     tab.
@@ -489,6 +509,9 @@ I)](https://blogs.cisco.com/learning/git-for-network-engineers-series-the-basics
 -   This is why respositories should NEVER be nested
 
 -   REVERT: Recovers the LAST status of a file from the last point in history.
+
+-   Reverting can be tried with "README.md" (but NOT with "README.Rmd"); then it
+    can be knit again.
 :::
 
 ## Iterating our work
@@ -508,10 +531,10 @@ I)](https://blogs.cisco.com/learning/git-for-network-engineers-series-the-basics
 :::
 
 ::: notes
-2: Why "discard chunk" option...? Rstudio should drop this feature
+2: Why "discard chunk" option...? Rstudio should drop this feature (IMO)
 
 3: Use the `SHIFT` key to select several lines (watch out with "selection", it
-does not always work)
+does not always work if the computer is slow)
 
 4: When seeing the "staged" changes, notice how the "stage chunk" and "discard
 chunk" buttons change to "unstage chunk"
@@ -532,7 +555,8 @@ chunk" buttons change to "unstage chunk"
 -   **Ammend**: Overwrite last commit (new changes / message)
 
 ::: notes
-"Ammend" allows you to "correct" and overwrite a (local) commit
+If asked about "Ammend" by attendees: It allows you to "correct" and overwrite a
+(local) commit (**NOT RECOMMENDED** unless you have some experience)
 :::
 
 # The git workflow
@@ -547,16 +571,11 @@ Mahugh](https://www.dougmahugh.com/envisioning-github/)
 ::: notes
 Use the "Post office" metaphor to explain:
 
--   Stage: Pack products (changes) to send
+-   Stage: Pack products (changes) to send (you can "pack" several files or
+    changes in a single package)
 
--   Commit: Check packages (changes) in to the postal service
-
-(You can check in several "packages" and the post officer can pick them up
-altogether)
-
--   Push: Send packages to their destination (changes to the repository)
-
--   Pull: Receive your packages (fetch changes and merge them)
+-   Commit: Check packages (changes) in to the postal service (each "commit" is
+    a package with several changes)
 :::
 
 ## (Even more) git jargon (\*)
@@ -577,6 +596,14 @@ altogether)
 :::
 
 ## Synchronizing with GitHub {.smaller}
+::: notes
+-   Push: Send packages to their destination (changes to GitHub)
+
+(You can check in several "packages" and the post officer can pick them up
+altogether. They are not "sent" to GitHub until you "push" them.)
+
+-   Pull: Receive your packages (fetch changes and merge them)
+:::
 
 <br>
 
@@ -598,10 +625,17 @@ altogether)
 
 ::: notes
 -   After committing (once or several times), one must "Push" the changes to the
-    repository. Also, at the end of a session is best practice to "Push", so
+    repository. Also, at the end of a session it is best practice to "Push", so
     that we have a backup of the whole commit history in the cloud (i.e. GitHub)
 
+-   Show how the repository now has a nice, personalized main page where the
+    "README.md" file has all the instructions for visitors to clone their
+    repository and understand what is its purpose.
 
+(NEXT)
+
+-   In this case, the local repository is in sync with the remote, so it will
+    not make any new change.
 :::
 
 ## DOs and DON'Ts in git (I) {.smaller}
@@ -635,16 +669,20 @@ altogether)
 ## DOs and DON'Ts in git (and II)
 
 ::: notes
+SHOULD NOT SPEND TOO MUCH TIME ON THIS
+
 -   "Bulk-commit": It's better to "be concious" when creating commits; it will
     pay off in the future.
 
-One does not need to "push" every time changes are committed. But it's good
-practice to push at least once in a while, when one is sure of the changes, or
-at least at the end of the working session
-:::
+-   One does not need to "push" every time changes are committed. But it's good
+    practice to push at least once in a while, when one is sure of the changes,
+    or at least at the end of the working session
 
+(NEXT)
 
-But it's better to try, at least...
+-   Pull when beginning session: It is **good practice** to remember to always
+    `pull` at the beginning of a session (e.g., a collaborator of yours, or
+    yourself from another computer, may have pushed changes)
 :::
 
 # Let's practice!
@@ -677,6 +715,9 @@ to the "src" folder of your local repository
 -   Stage and commit your changes
 
 ::: notes
+Install packages: The editor warns (in an upper banner) about missing packages
+when you open the script, and gives the option to install them.
+
 Snapshot library: The new libraries will be added to the "renv.lock"
 :::
 
