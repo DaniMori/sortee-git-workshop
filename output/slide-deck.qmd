@@ -42,6 +42,7 @@ format:
   revealjs:
     auto-stretch:            true
     code-annotations:        hover
+    code-block-height:       220px
     fig-cap-location:        bottom
     incremental:             true
     link-external-newwindow: true
@@ -184,7 +185,7 @@ The template will add some useful pre-cooked features to the new repository
 
 6.  Choose "Private" visibility
 
-7.  Leave "Include all branches" deselected
+7.  Leave "Include all branches" unselected
 
 8.  Click on "Create repository from template"
 :::
@@ -201,63 +202,17 @@ Description must be "short" and direct
 
 We only need the current state of the repository (what is in the last "version"
 of the main branch)
-:::
 
-## Explore your brand new repo {.nonincremental}
+**Give some time to explore the repository.**
 
-::: nonincremental
-<br>
-
--   Check interface elements: tabs, branches, files, "About", "README.md"
-
-<br>
-
--   Check "Repository structure" section in "README.md"
-
-<br>
-
--   Discuss folders created automatically
-:::
-
-::: notes
 Folders try to "mirror" the structure of an R package.
-
-Try to understand what all of them are for.
 
 Consider which ones you may need, and which ones you will want to delete.
 
 Let's not pay much attention to the files, by now (we will see later)
 
-".gitignore" files in subfolders are intended to "create the folder structure"
-(we will see later on what these files are)
-:::
-
-## Add collaborators
-
-<br>
-
-::: nonincremental
-1.  Click on tab "Settings"
-
-2.  Click on "Collaborators"
-
-3.  Authenticate yourself again (if required)
-
-4.  Click on "Add people"
-
-5.  Search for each other, [DaniMori](https://github.com/DaniMori), or
-    [emmapett](https://github.com/emmapett)
-
-6.  Click on a collaborator's profile
-
-7.  Click on "Add \<collaborator\> to this repository"
-
-8.  Go to "Notifications" and accept invitation(s)
-:::
-
-::: notes
-3: You may be required to authenticate again. Use you password or other method,
-if it is the case.
+".gitkeep" files in subfolders are intended to "create the folder structure" (we
+will see later on what these files are)
 :::
 
 # First steps in git
@@ -286,55 +241,25 @@ if it is the case.
 4.  Click on "Version Control"
 
 5.  Click on "Git"
-
-6.  In the "New Project Wizard" of Rstudio, paste into "Repository URL:"
 :::
 
 ::: notes
 1: Not the "Code" tab, but the green "Code" button
-
-<br>
-
-6: Note that Rstudio fills in the folder name for you automatically; you don't
-need to create a new folder to "nest" your repository into it, it will create it
-automatically. If it already exists and is not empty, it will give you an error
-and won't create the repository.
 :::
 
-## Clone repository (II)
+## Clone repository (and II) {.smaller}
 
 <br>
 
 ::: nonincremental
--   Cloud storage folders can produce synchronization conflicts
-:::
+6.  In the "New Project Wizard" of Rstudio, paste into "Repository URL:"
 
--   Network units can conflict with the R environment (more about this in a
-    while...)
+7.  Choose a local folder in "Create project as subdirectory of:"
 
--   **NEVER** clone a repository inside another one
-
-::: fragment
 ::: callout-tip
 Create a local "Workspace" folder in your "Documents" to store all your local
 repositories.
 :::
-:::
-
-::: notes
-Avoid using a network a cloud storage folder (e.g. Dropbox, OneDrive)
-
-Network units: May create conflicts with the R environment
-
-Nesting repositories can give problems
-:::
-
-## Clone repository (III)
-
-<br>
-
-::: nonincremental
-7.  Choose a local folder in "Create project as subdirectory of:"
 
 8.  Click on "Create Project"
 
@@ -344,52 +269,27 @@ Nesting repositories can give problems
 :::
 
 ::: aside
-\*: You will only be asked once
+\*: You will only be asked once (by computer)
 :::
 
 ::: notes
+6: Note that Rstudio fills in the folder name for you automatically; you don't
+need to create a new folder to "nest" your repository into it, it will create it
+automatically. If it already exists and is not empty, it will give you an error
+and won't create the repository. In that case, you can input another folder name
+of your choice.
+
+7:
+
+Avoid using a network or cloud storage folder (e.g. Dropbox, OneDrive); they can
+produce synchronization conflicts
+
+Network units can conflict with the R environment (more about this in a
+while...)
+
+**NEVER** clone a repository inside another one
+
 9: Signing-in: Necessary because the repository is "private"
-:::
-
-## Clone repository (and IV) {.smaller}
-
-<br>
-
-Try the following:
-
-::: nonincremental
--   Clone someone else's repo (\*)
-
-OR
-
--   Clone <https://github.com/emmapett/VC_Workshop> (\*)
-:::
-
-::: fragment
-::: callout-important
-If you get
-
-``` text
-fatal: destination path 'my-first-repo' already exists and is not an empty directory.
-```
-
-try a different local folder name
-:::
-:::
-
-::: aside
-\*: Select "Open in new session" this time
-:::
-
-::: notes
--   Let Emma show how she organizes her repository and what is its usefulness
-
--   You are not asked again to authenticate!!
-
--   The folder names must not "collapse", but the local folder name does not
-    need to be the same as the name of the repository. If you are so unlucky as
-    to have a repo with the same name as someone else's, try adding e.g. the
-    other user's name as suffix.
 :::
 
 ## Explore your local repo
@@ -412,9 +312,6 @@ try a different local folder name
 :::
 
 ::: notes
-Make sure you are in YOUR OWN repository (close the other's repo, or switch
-project)
-
 In tab "Files" in Rstudio, or in the Windows explorer
 
 ".git": Important to not mess with it (in the Windows explorer, note that it is
@@ -435,74 +332,43 @@ directly if you want, and deleting "README.Rmd"?
 "renv.lock" is the "R environment" file
 :::
 
-## R environment (I)
-
-<br>
-
-Have you noticed...?
-
-<br>
-
-``` r
-# Bootstrapping renv 0.17.3 --------------------------------------------------
-* Downloading renv 0.17.3 ... OK (downloaded binary)
-* Installing renv 0.17.3 ... Done!
-* Successfully installed and loaded renv 0.17.3.
-* Project '<path/to/project>' loaded. [renv 0.17.3]
-* This project contains a lockfile, but none of the recorded packages are installed.
-* Use `renv::restore()` to restore the project library.
-```
-
-::: notes
-Created by {renv}: ".Rprofile" is run everytime and R session starts
-
-(OPEN ".Rprofile")
-
-The script "renv/activate.R" is sourced, initializing package {renv}. This
-package creates and manages an R environment locally.
-:::
-
-## R environment (II)
+## R environment
 
 "renv.lock" file:
 
-```{embed, file="../renv.lock"}
+```{embed}
+#| file:   ../renv.lock
+#| block-height: 100
 ```
 
-## R environment (and III)
-
-<br>
-
+::: {.fragment .nonincremental}
 Update the environment:
 
-::: nonincremental
 1.  Go to the "Packages" tab in Rstudio
-
-<br>
+:::
 
 2.  Click on "renv" -\> "Restore library..."
 
-<br>
-
 3.  Click on "Restore"
-:::
 
 ::: notes
+Notice {renv} messages in the console. Explain that what it means:
+Inizialization of {renv}, a system to make the "environment" (packages &
+versions) reproducible.
+
+After the repository is cloned, we have to tell it to "install" all the packages
+of the environment.
+
 Notice that there is a new "drop down" menu, "renv", in the "Packages" tab.
-
-(AFTER 2:)
-
-Take a time to explore the "RestoreLibrary" window. Make sense of the different
-columns.
 
 (AFTER 3:)
 
-The environment has been restored (i.e. packages installed). It "links" the
-packages in the repository to a local library folder in my computer. This way,
-different repositories can share the same package version.
+The environment has been restored (i.e. packages installed). This makes the
+environment "more reproducible"
 
-The link to the library folder can be different. That's why it is not advisable
-to clone a repo in a network unit shared across different computers.
+Explanation (if necessary): Not completely reproducible, only dependencies from
+R packages; other stuff e.g. LaTeX packages, TeX engine... are not versioned by
+{renv}.
 :::
 
 ## Setting up git (\*) {.smaller}
@@ -722,25 +588,13 @@ altogether)
 
 -   Click on "Close"
 
-::: {.fragment fragment-index="1"}
-Then try the following:
-
--   Open someone else's repo (\*)
-
--   Open "www/.gitignore"
-
-::: incremental
--   Click on "Pull" in the "Git" tab
-
--   Notice the "warning window"?
-:::
-:::
+-   Navigate to your repository main page to see the changes online
 :::
 
-::: aside
-::: {.fragment fragment-index="1"}
-\*: The other one you cloned before
-:::
+::: {.nonincremental .fragment}
+-   Click on "Pull" in the "Git" tab in Rstudio
+
+-   Read response message (from GitHub)
 :::
 
 ::: notes
@@ -748,12 +602,7 @@ Then try the following:
     repository. Also, at the end of a session is best practice to "Push", so
     that we have a backup of the whole commit history in the cloud (i.e. GitHub)
 
--   Open someone else's repo by "opening the Rstudio project"
 
--   Click "Pull" and WATCH OUT for the Warning message: It always appears when a
-    file open in the editor "dissapears" from the file system. One must "click
-    on No" out of fear for losing something. Better "click on Yes" to have our
-    workspace in the same state as the remote.
 :::
 
 ## DOs and DON'Ts in git (I) {.smaller}
@@ -795,18 +644,6 @@ practice to push at least once in a while, when one is sure of the changes, or
 at least at the end of the working session
 :::
 
-Meaningful commit messages...
-
-![](../www/vc-designers.jpg){fig-align="center" height="450"}
-
-::: aside
-*Versioning is important* by
-[CommitStrip.com](https://www.commitstrip.com/en/2017/09/12/versioning-is-important/)
-:::
-
-::: notes
-In the end, the typical commit history looks like this... Even SW engineers make
-fun of themselves about it.
 
 But it's better to try, at least...
 :::
@@ -871,17 +708,13 @@ file staged, and then the line uncommented again.
 It can also be done in the terminal (but no need to learn the commands)
 :::
 
-## File paths (I)
+## File paths
 
 <br>
 
 ::: nonincremental
--   Notice the "working directory" on top of the "Console" tab
-
-<br>
-
-::: fragment
--   Change the file path in line 15 of "src/Analysis.R" to point to the dataset:
+-   Change the file path in line 13 of "src/Analysis.R" to point to your
+    dataset:
 
 ``` r
 DATASET_DIR <- "dat"
@@ -889,39 +722,13 @@ DATASET_DIR <- "dat"
 # TODO: Complete path
 DATASET_PATH <- file.path(DATASET_DIR, "penguins.csv")
 ```
-:::
-:::
 
-## File paths (and II) {.smaller}
-
-<br>
-
-::: callout-tip
-Use "relative paths" and "user home" to point to files:
-
-``` r
-"./"  # This level
-"../" # One level up
-"~/"  # User home
-```
+-   Notice the "working directory" on top of the "Console" tab
 :::
 
-::: fragment
-::: callout-note
-You can check *absolute paths* w. `normalizePath()`:
-
-``` {.r code-line-numbers="1-3|5-6|8-9"}
-# Path relative to working directory:
-DATA_PATH <- "./dat/data_file.csv"
-normalizePath(DATA_PATH, winslash = '/')
-
-# Path in a folder "at the same level as the repo"
-normalizePath("../datasets/data_file.csv", winslash = '/')
-
-# Path relative to user home:
-normalizePath("~/../local_folder/data_file.csv", winslash = '/')
-```
-:::
+::: {.callout-tip .fragment}
+Use ["relative paths"](https://phoenixnap.com/kb/absolute-path-vs-relative-path)
+to make your code reproducible across computers
 :::
 
 ::: notes
@@ -929,7 +736,12 @@ Using relative paths:
 
 -   The working directory will always be the base folder for Rstudio projects
 
--   Make paths "relative" to the working directory
+NOTE: If asked about the meaning of "\~", explain the "User home". It can be
+shown with `normalizePath("~", winslash = '/')`
+
+-   Always make paths "relative" to the working directory
+
+-   NEVER use `setwd()` in your scripts
 :::
 
 ## Making new commits
@@ -945,52 +757,6 @@ Using relative paths:
 <br>
 
 -   Maybe push your recent commits?
-
-# Making the most out of git
-
-![](../www/no-merge-conflicts.jpg){fig-align="center" height="350"}
-
-<br>
-
-::: aside
-Taken from [makeameme.org](https://makeameme.org/meme/git-merge-no)
-:::
-
-## What to version {.smaller}
-
-<br>
-
-#### DO NOT VERSION
-
-1.  Dataset files
-
-2.  Passwords, private keys, and other "secrets"
-
-3.  Binary files
-
-4.  Outcomes & deliverables
-
-<br>
-
-::: fragment
-#### VERSION
-:::
-
-5.  Your own work
-
-6.  Environment ({renv}) files, if necessary
-
-7.  Anything else ***necessary to reproduce*** your outcomes (\*)
-
-::: aside
-::: fragment
-\* Even exceptions to (3) (and maybe (2)), but **never** (1)
-:::
-:::
-
-::: notes
-7.  E.g. the "renv.lock" file, which stores the environment state
-:::
 
 ## Viewing your history
 
@@ -1012,10 +778,81 @@ previous version of the file, or "copying" what we want to recover and pasting
 it in the current version in our file system.
 :::
 
-## Become a git roadrunner!
+# Wrapping up
 
 <br>
 
+-   Set up the git client locally
+
+-   Create a repository in GitHub
+
+-   Clone a remote repository locally
+
+-   Track changes
+
+-   Explore history
+
+::: notes
+Remember: Setting up the git client only needs to be done once per computer.
+:::
+
+## The End {.center}
+
+<br>
+
+::: {#title-slide .center}
+### Many thanks!
+
+<br> <br>
+
+### ¡Muchas gracias!
+:::
+
+# Bonus tips!
+
+![](../www/no-merge-conflicts.jpg){fig-align="center" height="350"}
+
+<br>
+
+::: aside
+Taken from [makeameme.org](https://makeameme.org/meme/git-merge-no)
+:::
+
+## What to version {.smaller}
+
+::: nonincremental
+#### DO NOT VERSION
+
+1.  Dataset files
+
+2.  Passwords, private keys, and other "secrets"
+
+3.  Binary files
+
+4.  Outcomes & deliverables
+
+#### VERSION
+
+5.  Your own work
+
+6.  Environment ({renv}) files, if necessary
+
+7.  Anything else (𐠒) ***necessary to reproduce*** your outcomes (\*)
+:::
+
+::: aside
+𐠒: Even exceptions to (3) (and maybe (1)?), but **never** (2).
+
+\*: E.g. the "renv.lock" file, which stores your environment state.
+:::
+
+## Become a git roadrunner! {.smaller}
+
+<br>
+
+Save hours of lifetime with shortcuts (\*):
+
+::: nonincremental
 -   Open git window with `CTRL + ALT + M`
 
 -   Stage files with `SPACE` and `UP / DOWN`, or pointer
@@ -1028,40 +865,12 @@ it in the current version in our file system.
 
 -   Close git window with `ALT + F4` or go to Rstudio main window with
     `ALT + TAB`
-
-# Wrapping up
-
-<br>
-
--   Set up the git client
-
--   Create a repository in GitHub
-
--   Clone a remote repository locally
-
--   Track changes
-
--   Explore history
-
-## Future steps
+:::
 
 <br>
 
-::: nonincremental
--   [GUI Clients](https://git-scm.com/downloads/guis) (my recommendation,
-    [SourceTree](https://www.sourcetreeapp.com/))
-
--   [Using built-in git operations in
-    SAS](https://blogs.sas.com/content/sasdummy/2020/11/10/sas-projects-git/)
-
--   [git integration in
-    Stata](https://medium.com/the-stata-guide/stata-and-github-integration-8c87ddf9784a)
-
--   [Git
-    Branching](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
-
--   [Pro Git, 2nd edition](https://git-scm.com/book/en/v2), by Scott Chacon and
-    Ben Straub
+::: aside
+\* Windows/Linux shortcuts, sorry MAC users :(
 :::
 
 ## Useful resources {.smaller}
@@ -1098,14 +907,23 @@ it in the current version in our file system.
     & Artificial Intelligence Laboratory](https://www.csail.mit.edu/)
 :::
 
-## The End {.center}
+## Future steps
 
 <br>
 
-::: {#title-slide .center}
-### Many thanks!
+::: nonincremental
+-   [GUI Clients](https://git-scm.com/downloads/guis) (my recommendation,
+    [SourceTree](https://www.sourcetreeapp.com/))
 
-<br> <br> <br>
+-   [Using built-in git operations in
+    SAS](https://blogs.sas.com/content/sasdummy/2020/11/10/sas-projects-git/)
 
-### ¡Muchas gracias!
+-   [git integration in
+    Stata](https://medium.com/the-stata-guide/stata-and-github-integration-8c87ddf9784a)
+
+-   [Git
+    Branching](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
+
+-   [Pro Git, 2nd edition](https://git-scm.com/book/en/v2), by Scott Chacon and
+    Ben Straub
 :::
