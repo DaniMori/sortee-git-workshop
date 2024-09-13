@@ -425,16 +425,18 @@ git config --global user.email "DaniMori\@users.noreply.github.com"
 -   Delete unnecessary folders / files
 
 ::: {.nonincremental .fragment}
--   Edit "README.md":
+-   Edit "README.Rmd":
 
-    -   Change \<repository-name\> by your repo (lines 2 & 113)
+    -   Change `<repository-name>` by your repo (lines 12-14)
 
-    -   Change \<repository-url\> by yours (line 66)
+    -   Change `<username>` by your GitHub user name (lines 16-18)
 
-    -   Edit "License" section (lines 8-32)
+    -   Edit description in section "Repository" (lines 23-24)
 
-    -   Edit "description" (line 4)
+    -   Delete description of unused folders (lines 158-181)
 :::
+
+-   Knit "README.md"
 
 ::: notes
 Delete folders "apps", "doc", "notebooks", "output", and/or "R" (give
