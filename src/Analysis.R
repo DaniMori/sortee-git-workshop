@@ -9,10 +9,9 @@ library(labelled)
 
 ## ----file-system-objects----
 
-DATASET_DIR <- "dat"
-
-# TODO: Complete path with "<dataset_filename>"
-DATASET_PATH <- file.path(DATASET_DIR, "<dataset_filename>.csv")
+# TODO: Change "<dataset_filename>" by the name of your own dataset, if
+#   necessary (e.g., "dat/penguins.csv")
+DATASET_PATH <- "dat/<dataset_filename>.csv"
 
 
 ## ----main----
