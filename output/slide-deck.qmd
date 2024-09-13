@@ -550,11 +550,13 @@ chunk" buttons change to "unstage chunk"
 
 -   **Stage/add**: Mark changes for begin tracked
 
+<br>
+
 -   **Commit**: Create a new "point in the history"
 
--   **Revert**: Revert changes to a file (revert to last commit)
+<br>
 
--   **Ammend**: Overwrite last commit (new changes / message)
+-   **Revert**: Revert changes to a file (revert to last commit)
 
 ::: notes
 If asked about "Ammend" by attendees: It allows you to "correct" and overwrite a
