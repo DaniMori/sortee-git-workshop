@@ -420,9 +420,11 @@ e.g.:
 git config --global user.email "DaniMori\@users.noreply.github.com"
 :::
 
-## Let's make some changes
+## Let's make some changes {.smaller}
 
--   Delete unnecessary folders / files
+<br>
+
+-   Delete unnecessary folders
 
 ::: {.nonincremental .fragment}
 -   Edit "README.Rmd":
@@ -521,15 +523,15 @@ I)](https://blogs.cisco.com/learning/git-for-network-engineers-series-the-basics
 ::: nonincremental
 1.  Click on the "Commit" button in the "Git" tab of Rstudio
 
-2.  **NEVER** click on discard chunk (unless you are 100% sure)
+2.  Stage files / chunks / selection of lines
 
-3.  Select files / chunks / selection
+    -   **NEVER** click on discard chunk (unless you are 100% sure)
 
-4.  Click on "staged / unstaged" to see the changes "ready to commit"
+3.  Click on "staged / unstaged" to see the changes "ready to commit"
 
-5.  Write message in "Commit message" text box
+4.  Write message in "Commit message" text box
 
-6.  Click on "Commit"
+5.  Click on "Commit"
 :::
 
 ::: notes
@@ -599,7 +601,6 @@ Use the "Post office" metaphor to explain:
 \*: Last one, I promise!
 :::
 
-## Synchronizing with GitHub {.smaller}
 ::: notes
 -   Push: Send packages to their destination (changes to GitHub)
 
@@ -608,6 +609,8 @@ altogether. They are not "sent" to GitHub until you "push" them.)
 
 -   Pull: Receive your packages (fetch changes and merge them)
 :::
+
+## Synchronizing with GitHub
 
 <br>
 
@@ -642,7 +645,7 @@ altogether. They are not "sent" to GitHub until you "push" them.)
     not make any new change.
 :::
 
-## DOs and DON'Ts in git (I) {.smaller}
+## DOs and DON'Ts in git {.smaller}
 
 <br>
 
@@ -664,13 +667,11 @@ altogether. They are not "sent" to GitHub until you "push" them.)
 
 -   Pull always when beginning to work
 
+-   Write [meaningful commit messages](https://cbea.ms/git-commit/)
+
 -   Commit (+ Push) often
 
 -   Push always when finishing work
-
--   Write "meaningful commit messages"
-
-## DOs and DON'Ts in git (and II)
 
 ::: notes
 SHOULD NOT SPEND TOO MUCH TIME ON THIS
@@ -714,7 +715,7 @@ OR
 to the "src" folder of your local repository
 :::
 
--   Install necessary packages and "Snapshot Library..."
+-   Install necessary packages, then "renv" -\> "Snapshot Library..."
 
 -   Stage and commit your changes
 
