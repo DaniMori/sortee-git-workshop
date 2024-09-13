@@ -62,13 +62,19 @@ knitr: true
 ::: nonincremental
 #### FOLLOW LOCALLY:
 
--   <https://bit.ly/gitws-follow>
+<!-- TODO: Host version and create bit.ly short link -->
+
+-   <https://unedo365-my.sharepoint.com/:u:/g/personal/dvmorillo_psi_uned_es/EZBXy-Z5U75FsCKM_P0lTTkBzx3eH0IkrczYzmpPiCX31g?e=4ko0WX>
 
 #### \<SECTION\>: <!-- TODO: Technical assistance procedure -->
 :::
 
 ::: notes
 -   Follow presentation, useful for copy-pasting (tested in Chrome)
+
+**NOTE**: To avoid opening the file link in the same tab as the presentation,
+press `CTRL + click`. After clicking the link, direct attention to button
+"Download raw file"
 
 -   <!-- TODO: Notes about technical assistance? -->
 :::
@@ -706,7 +712,8 @@ SHOULD NOT SPEND TOO MUCH TIME ON THIS
 <br>
 
 ::: nonincremental
--   Download <https://bit.ly/script-gitws>
+-   Download <!-- TODO: Create bit.ly short link -->
+    <https://github.com/DaniMori/sortee-git-workshop/blob/feature/content-update/src/Analysis.R>
 
 OR
 
@@ -720,6 +727,10 @@ to the "src" folder of your local repository
 -   Stage and commit your changes
 
 ::: notes
+**NOTE**: To avoid opening the file link in the same tab as the presentation,
+press `CTRL + click`. After clicking the link, direct attention to button
+"Download raw file"
+
 Install packages: The editor warns (in an upper banner) about missing packages
 when you open the script, and gives the option to install them.
 
@@ -731,7 +742,8 @@ Snapshot library: The new libraries will be added to the "renv.lock"
 <br>
 
 ::: nonincremental
--   Download <https://bit.ly/dataset-gitws>
+-   Download <!-- TODO: Create bit.ly short link -->
+    <https://github.com/DaniMori/sortee-git-workshop/blob/feature/content-update/dat/penguins.csv>
 
 OR
 
@@ -745,6 +757,10 @@ to the "dat" folder of your local repository
 -   How would you add a file in "dat" to your repository?
 
 ::: notes
+**NOTE**: To avoid opening the file link in the same tab as the presentation,
+press `CTRL + click`. After clicking the link, direct attention to button
+"Download raw file"
+
 The "dat" folder is ignored (i.e. any file whose path "starts with" that folder)
 
 The line in ".gitignore" can be commented (with a \# in front) or deleted, the
