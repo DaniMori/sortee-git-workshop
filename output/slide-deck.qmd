@@ -59,17 +59,17 @@ knitr: true
 ## Setup
 
 ::: nonincremental
-#### \<SECTION\>: <!-- TODO: Split rooms comment? -->
-
 #### FOLLOW LOCALLY:
 
 -   <https://bit.ly/gitws-follow>
+
+#### \<SECTION\>: <!-- TODO: Technical assistance procedure -->
 :::
 
 ::: notes
--   <!-- TODO: Notes about split rooms? -->
-
 -   Follow presentation, useful for copy-pasting (tested in Chrome)
+
+-   <!-- TODO: Notes about technical assistance? -->
 :::
 
 # git + GitHub: An overview
