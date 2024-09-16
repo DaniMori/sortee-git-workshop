@@ -5,16 +5,6 @@ library(forcats)
 library(stringr)
 library(tidyr)
 library(labelled)
-# library(gtsummary) ## TODO: Install {gtsummary} if necessary
-
-## ----file-system-objects----
-
-# TODO: Change "<dataset_filename>" by the name of your own dataset, if
-#   necessary (e.g., "dat/penguins.csv")
-DATASET_PATH <- "dat/<dataset_filename>.csv"
-
-
-## ----main----
 
 ## ----load-data----
 
@@ -22,7 +12,7 @@ DATASET_PATH <- "dat/<dataset_filename>.csv"
 
 ## Read dataset:
 penguins_data <- read_csv(
-  DATASET_PATH,
+  file = "dat/penguins.csv",
   col_types = cols(
     species  = col_factor(),
     island   = col_factor(),
@@ -42,7 +32,8 @@ penguins_data <- penguins_data |>
 ## Assign labels:
 # (see https://allisonhorst.github.io/palmerpenguins/reference/penguins.html
 #   for more info):
-penguins_data <- penguins_data |> set_variable_labels(
+penguins_data <- penguins_data |>
+  set_variable_labels(
   species           = "Penguin species",
   island            = "Island in Palmer Archipielago",
   bill_length_mm    = "Bill length (mm)",
@@ -60,25 +51,33 @@ penguins_data <- penguins_data |> drop_na()
 
 ## ----descriptives----
 
-# NOTE: Descriptives not computed, as `gtsummary` package is too heavy
+## Simple summary:
+penguins_data |> summary()
+
+## Create a contingency table:
+counts_table <-
+  penguins_data |>
+  group_by(species, island, sex) |>
+  count() |>
+  ungroup()
 
 ## Create descriptive statistics table:
-# descriptive_table <- penguins_data |> tbl_summary()
-# descriptive_table
-## TODO: Uncomment if using {gtsummary}
-
-## Create contingency table of sex and species:
-# contingency_table <- penguins_data |> tbl_cross(row = sex, col = species)
-# contingency_table
-## TODO: Uncomment if using {gtsummary}
+summary_metrics <-
+  penguins_data |>
+  group_by(species, island, sex) |>
+  summarise(mean_bill_length = mean(bill_length_mm),
+            se_bill_length = sd(bill_length_mm)/sqrt(n()),
+            mean_flipper_length = mean(flipper_length_mm),
+            se_flipper_length = sd(flipper_length_mm)/sqrt(n()),
+            mean_body_mass = mean(body_mass_g),
+            se_body_mass = sd(body_mass_g)/sqrt(n())
+  ) |>
+  ungroup()
 
 
 ## ----modeling----
 
 bodymass_fit <- lm(body_mass_g ~ sex * species, data = penguins_data)
-## TODO: Add covariates maybe?
+## TODO: Add covariates? Test model assumptions?
 
-# NOTE: Output table not created, as `gtsummary` package is too heavy
-# bodymass_coef_table <- bodymass_fit |> tbl_regression()
-# bodymass_coef_table
-## TODO: Uncomment if using {gtsummary}
+
