@@ -555,13 +555,17 @@ I)](https://blogs.cisco.com/learning/git-for-network-engineers-series-the-basics
 
 2.  Stage files / chunks / selection of lines
 
-    -   **NEVER** click on discard chunk (unless you are 100% sure)
+    -   **NEVER** click on discard chunk (\*)
 
 3.  Click on "staged / unstaged" to see the changes "ready to commit"
 
 4.  Write message in "Commit message" text box
 
 5.  Click on "Commit"
+:::
+
+::: aside
+\*: unless you are 100% sure
 :::
 
 ::: notes
