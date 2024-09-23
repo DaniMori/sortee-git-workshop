@@ -26,15 +26,14 @@ author:      |
 institute:   |
   <table>
     <tr>
-      <td>
-        <left>
-          [![](../www/Logo Psicologia.gif){height="75"}](https://www.uned.es/universidad/facultades/psicologia/)
-        </left>
+      <td style="width: 150px">
+        [![](../www/UNED_logo.JPG){height="55"}](https://www.uned.es/universidad/inicio/en/)
       </td>
       <td>
-        <right>
-          [![](<!--# TODO: UQ Logo -->){height="75"}](<!-- # TODO: UQ URL -->)
-        </right>
+        [![](../www/SORTEE_logo.png){height="120"}](https://www.sortee.org/)
+      </td>
+      <td>
+        [![](../www/UQlogo.png){height="50"}](https://www.uq.edu.au/)
       </td>
     </tr>
   </table>
