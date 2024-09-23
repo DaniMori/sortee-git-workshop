@@ -33,7 +33,7 @@ institute:   |
       </td>
       <td>
         <right>
-          [![](../www/UQlogo.png){height="75"}](https://www.uq.edu.au/)
+          [![](<!--# TODO: UQ Logo -->){height="75"}](<!-- # TODO: UQ URL -->)
         </right>
       </td>
     </tr>
@@ -66,24 +66,15 @@ knitr: true
 
 -   <https://unedo365-my.sharepoint.com/:u:/g/personal/dvmorillo_psi_uned_es/EZBXy-Z5U75FsCKM_P0lTTkBzx3eH0IkrczYzmpPiCX31g?e=4ko0WX>
 
-#### Technical assistance procedure
-
--   If you get stuck, copy and paste the error message to the chat (and chances
-    are someone else is also getting the same error!)
-
 <br>
 
--   The tech help (Kevin) will try to help you resolve it over chat
+#### PARTICIPATE:
 
-<br>
+-   Use ✋ to speak up
 
--   We will use the raise hand feature (or similar) to see if everyone is ready
-    to move on from each exercise as we go
+-   Use ✅ when ready to continue
 
-<br>
-
--   As a last resort, we can move to a private breakout room to discuss and try
-    to resolve computer issues
+-   Use ❌ to ask for help
 :::
 
 ::: notes
@@ -92,7 +83,24 @@ knitr: true
 **NOTE**: To avoid opening the file link in the same tab as the presentation,
 press `CTRL + click`. After clicking the link, direct attention to button
 "Download raw file"
+:::
 
+## Get help
+
+<br>
+
+-   Paste the error message to the chat
+
+<br>
+
+-   Kevin will help you out over chat
+
+<br>
+
+-   As a last resort, Kevin will take you to a private breakout room to discuss
+    and try to resolve computer issues
+
+::: notes
 -   <!-- TODO: Notes about technical assistance? -->
 :::
 
@@ -255,10 +263,9 @@ will see later on what these files are)
 <br>
 
 ::: nonincremental
-1.  **In your GitHub repo**, return to the "Code" tab and click on the green
-    "Code" button
+1.  **In the "Code" tab of your GitHub repo** click on the "Code" button
 
-2.  Click the "HTTPS" option and copy the "https://..." address
+2.  In the "HTTPS" option, copy the repository URL address
 
 3.  **In Rstudio** click on "File" -\> "New project..."
 
@@ -356,7 +363,7 @@ directly if you want, and deleting "README.Rmd"?
 "renv.lock" is the "R environment" file
 :::
 
-## R environment (I)
+## R environment
 
 "renv.lock" file:
 
@@ -364,10 +371,6 @@ directly if you want, and deleting "README.Rmd"?
 #| file:   ../renv.lock
 #| block-height: 100
 ```
-
-## R environment (II)
-
-"renv.lock" file:
 
 ::: {.fragment .nonincremental}
 Update the environment:
