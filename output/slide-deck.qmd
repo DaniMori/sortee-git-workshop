@@ -799,16 +799,17 @@ It can also be done in the terminal (but no need to learn the commands)
 
 ## File paths
 
-<br>
-
 ::: nonincremental
--   Change the file path in line 13 of "src/Analysis.R" to point to your
+-   Change the file path in line 20 of "src/Analysis.R" to point to your
     dataset:
 
 ``` r
-# TODO: Change "<dataset_filename>" by the name of your own dataset, if
-#   necessary (e.g., "dat/penguins.csv")
-DATASET_PATH <- "dat/<dataset_filename>.csv"
+## Read dataset:
+penguins_data <- read_csv(
+  # TODO: Change "<dataset_filename>" by the name of your own dataset, if
+  #   necessary (e.g., "dat/penguins.csv")
+  file = "dat/<dataset_filename>.csv",
+  ...
 ```
 
 -   Notice the "working directory" on top of the "Console" tab
