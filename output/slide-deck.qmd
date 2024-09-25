@@ -63,7 +63,7 @@ knitr: true
 
 <!-- TODO: Host version and create bit.ly short link -->
 
--   <https://unedo365-my.sharepoint.com/:u:/g/personal/dvmorillo_psi_uned_es/EZBXy-Z5U75FsCKM_P0lTTkBzx3eH0IkrczYzmpPiCX31g?e=4ko0WX>
+-   <https://bit.ly/follow-tmp>
 
 <br>
 
