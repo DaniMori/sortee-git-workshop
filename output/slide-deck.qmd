@@ -469,7 +469,7 @@ git config --global user.email "DaniMori\@users.noreply.github.com"
     -   Delete description of unused folders (lines 158-181)
 :::
 
--   Knit "README.md"
+-   Knit "README.md" (blue yarn above editor)
 
 ::: notes
 Delete folders "apps", "doc", "notebooks", "output", and/or "R" (give
