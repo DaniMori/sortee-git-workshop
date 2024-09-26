@@ -334,7 +334,7 @@ while...)
 
     -   "README.md" and "README.Rmd"
 
-    -   "LICENSE.md"
+    -   "LICENSE.md" (you can [choose others](https://choosealicense.com/))
 
     -   ".Rprofile"
 
@@ -354,8 +354,9 @@ E.g.: Only R code, delete "output", "www/YYYY-mm-dd_Meeting_template.md", etc.
 
 ".gitignore" file will tell "git" that certain files must be "ignored"
 
-"README.md" is the "landing-page documentation" of the project. Consider editing
-directly if you want, and deleting "README.Rmd"?
+"README.md" is the "landing-page documentation" of the project. In this case, it
+is intended to explain the use of the template. Later on we will generate a new
+one for our project.
 
 ".Rprofile" only runs a script (we will see later what and why)
 
