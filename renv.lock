@@ -59,27 +59,13 @@
     },
     "bit": {
       "Package": "bit",
-      "Version": "4.0.5",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R"
-      ],
-      "Hash": "d242abec29412ce988848d0294b208fd"
+      "Version": "4.5.0",
+      "Source": "Repository"
     },
     "bit64": {
       "Package": "bit64",
-      "Version": "4.0.5",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "bit",
-        "methods",
-        "stats",
-        "utils"
-      ],
-      "Hash": "9fe98599ca456d6552421db0d6772d8f"
+      "Version": "4.5.2",
+      "Source": "Repository"
     },
     "bslib": {
       "Package": "bslib",
@@ -193,14 +179,8 @@
     },
     "evaluate": {
       "Package": "evaluate",
-      "Version": "0.24.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "methods"
-      ],
-      "Hash": "a1066cbc05caee9a4bf6d90f194ff4da"
+      "Version": "1.0.0",
+      "Source": "Repository"
     },
     "fansi": {
       "Package": "fansi",
@@ -366,13 +346,8 @@
     },
     "jsonlite": {
       "Package": "jsonlite",
-      "Version": "1.8.8",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "methods"
-      ],
-      "Hash": "e1b9c55281c5adc4dd113652d9e26768"
+      "Version": "1.8.9",
+      "Source": "Repository"
     },
     "knitr": {
       "Package": "knitr",
@@ -556,14 +531,8 @@
     },
     "ps": {
       "Package": "ps",
-      "Version": "1.7.7",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "utils"
-      ],
-      "Hash": "878b467580097e9c383acbb16adab57a"
+      "Version": "1.8.0",
+      "Source": "Repository"
     },
     "purrr": {
       "Package": "purrr",
@@ -804,13 +773,8 @@
     },
     "tinytex": {
       "Package": "tinytex",
-      "Version": "0.52",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "xfun"
-      ],
-      "Hash": "cfbad971a71f0e27cec22e544a08bc3b"
+      "Version": "0.53",
+      "Source": "Repository"
     },
     "tzdb": {
       "Package": "tzdb",
