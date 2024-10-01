@@ -232,17 +232,6 @@ Description must be "short" and direct
 
 We only need the current state of the repository (what is in the last "version"
 of the main branch)
-
-**Give some time to explore the repository.**
-
-Folders try to "mirror" the structure of an R package.
-
-Consider which ones you may need, and which ones you will want to delete.
-
-Let's not pay much attention to the files, by now (we will see later)
-
-".gitkeep" files in subfolders are intended to "create the folder structure" (we
-will see later on what these files are)
 :::
 
 # First steps in git
@@ -342,6 +331,12 @@ while...)
 :::
 
 ::: notes
+Folders try to "mirror" (loosely) the structure of an R package.
+
+Consider which ones you may need, and which ones you will want to delete.
+
+(**Give a couple of minutes to explore the repository.**)
+
 In tab "Files" in Rstudio, or in the Windows explorer
 
 ".git": Important to not mess with it (in the Windows explorer, note that it is
