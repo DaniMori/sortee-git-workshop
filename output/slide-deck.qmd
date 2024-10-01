@@ -143,6 +143,18 @@ GitHub](https://www.freecodecamp.org/news/the-beginners-guide-to-git-github/) \@
 
 -   Nice GUI & features on top of VC
 
+## git jargon
+
+<br>
+
+-   **Repository ("repo")**: A "project", where all your files live
+
+-   **Remote**: Copy of a repository in Github
+
+-   **Local**: Copy of a repository in your computer
+
+-   **Clone**: To copy a local repository from a remote
+
 ## Typical VC setup
 
 ![](../www/git-workflow.png){fig-align="center" height="520"}
@@ -158,18 +170,6 @@ Taken from [Hackolade.com](https://hackolade.com/help/Teamcollaboration.html)
 
 -   You use a VC server to back-up and collaborate
 :::
-
-## git jargon
-
-<br>
-
--   **Repository ("repo")**: A "project", where all your files live
-
--   **Remote**: Copy of a repository in Github
-
--   **Local**: Copy of a repository in your computer
-
--   **Clone**: To copy a local repository from a remote
 
 # First steps in GitHub
 
@@ -281,7 +281,7 @@ will see later on what these files are)
 
 <br>
 
-::: nonincremental
+:::: nonincremental
 6.  In the "New Project Wizard" of Rstudio, paste into "Repository URL:"
 
 7.  Choose a local folder in "Create project as subdirectory of:"
@@ -296,7 +296,7 @@ repositories.
 9.  Click on "Sign in with your browser" (\*)
 
 10. Close the browser tab / window
-:::
+::::
 
 ::: aside
 \*: You will only be asked once (by computer)
@@ -408,7 +408,7 @@ Before starting to use version control...
 
 1.  Go to the "Terminal" tab in Rstudio
 
-::: {.fragment .nonincremental}
+:::: {.fragment .nonincremental}
 2.  Type in:
 
 ``` {.bash code-line-numbers="1-2|4-5|7-8|10-11"}
@@ -428,7 +428,7 @@ git config --list --global
 ::: callout-tip
 Paste in terminal with `Shift-Insert`.
 :::
-:::
+::::
 
 ::: aside
 \*: You will only have to do this once (by computer)
