@@ -456,9 +456,7 @@ git config --global user.email "DaniMori\@users.noreply.github.com"
 
 <br>
 
--   Delete unnecessary folders
-
-::: {.nonincremental .fragment}
+::: nonincremental
 -   Edit "README.Rmd":
 
     -   Change `<repository-name>` by your repo (lines 12-14)
@@ -466,26 +464,19 @@ git config --global user.email "DaniMori\@users.noreply.github.com"
     -   Change `<username>` by your GitHub user name (lines 16-18)
 
     -   Edit description in section "Repository" (lines 23-24)
+:::
 
-    -   Delete description of unused folders (lines 158-181)
+::: {.fragment .nonincremental}
+Optionally:
+
+-   Delete unnecessary folders
+
+-   Delete description of unused folders (circa ll. 158-181)
 :::
 
 -   Knit "README.md" (blue yarn above editor)
 
 ::: notes
-Delete folders "apps", "doc", "notebooks", "output", and/or "R" (give
-flexibility, depending on what they plan to add to their project)
-
-(Note that this results in deleting the file(s) within, not the folder; in this
-case, the ".kitkeep" files. git has no notion of folders, only files.)
-
-Do NOT delete: "src", "dat" (both necessary later on, if they use the script and
-dataset provided), or "renv".
-
-IMPORTANT!! NEVER delete ".Rprofile", "renv.lock" or the "renv" folder
-
-(NEXT)
-
 We will create a "README" file for our new project. Information for "visitors"
 of your repository. Useful if you plan to make it public at some point. **Give
 some time to get familiar with it!**
@@ -501,6 +492,19 @@ editing the "repository description" in the previous step.
 IMPORTANT: HIGHLIGHT this is *just a text file*; git versions (easily) text
 files, and keeps track of the changes. Scripts (and ".R" files in general),
 notebooks, and Quarto documents are **also text files** (just characters).
+
+(NEXT)
+
+Do NOT delete: "src", "dat" (both necessary later on, if they use the script and
+dataset provided), or "renv".
+
+IMPORTANT!! NEVER delete ".Rprofile", "renv.lock" or the "renv" folder
+
+Delete folders "apps", "doc", "notebooks", "output", "R", and/or "www" (give
+flexibility, depending on what they plan to add to their project)
+
+(Note that this results in deleting the file(s) within, not the folder; in this
+case, the ".kitkeep" files. git has no notion of folders, only files.)
 
 (NEXT)
 
