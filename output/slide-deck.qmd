@@ -533,6 +533,8 @@ I)](https://blogs.cisco.com/learning/git-for-network-engineers-series-the-basics
 
 -   What do the different "Status" icons mean?
 
+Optionally:
+
 -   Right click on a "deleted file", then "Revert". What happens?
 
 -   BEWARE of reverting modified files!
@@ -586,6 +588,17 @@ does not always work if the computer is slow)
 chunk" buttons change to "unstage chunk"
 
 5: Git does not allow "empty commmit messages"
+
+The Git tab has changed:
+
+-   The "added/deleted/modified files" are not shown anymore. This means that
+    the files are in the same state as the latest version recorded by git. Only
+    when we make new changes they will appear again in the git tab.
+
+-   A banner appears on top informing of "commits ahead of origin" (remote).
+    This means that our repository has changes that are not synchronized with
+    the remote (identified by "origin" here). This will be the next step we will
+    learn.
 :::
 
 ## (More) git jargon
@@ -617,7 +630,7 @@ Mahugh](https://www.dougmahugh.com/envisioning-github/)
 :::
 
 ::: notes
-Use the "Post office" metaphor to explain:
+(Optionally) Use the "Post office" metaphor to explain:
 
 -   Stage: Pack products (changes) to send (you can "pack" several files or
     changes in a single package)
