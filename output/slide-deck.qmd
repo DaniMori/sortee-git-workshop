@@ -196,6 +196,9 @@ API](https://www.perl.com/article/112/2014/9/5/Analyzing-GitHub-with-the-search-
 :::
 
 ::: notes
+**PURPOSE:** We are going to create a repository to track all the history of a
+project (analysis, paper, thesis, or a wider project).
+
 Depending on your settings you may be required a 2-factor authentication method
 
 The template will add some useful pre-cooked features to the new repository
@@ -263,6 +266,9 @@ of the main branch)
 :::
 
 ::: notes
+**PURPOSE:** We are going to "clone" or create a local copy of our repository,
+so we can work on it and track the history of our changes easily.
+
 1: Not the "Code" tab, but the green "Code" button
 :::
 
@@ -565,6 +571,8 @@ I)](https://blogs.cisco.com/learning/git-for-network-engineers-series-the-basics
 :::
 
 ::: notes
+**PURPOSE:** Create new commits (points in history) with our latest changes.
+
 2: Why "discard chunk" option...? Rstudio should drop this feature (IMO)
 
 3: Use the `SHIFT` key to select several lines (watch out with "selection", it
@@ -661,6 +669,8 @@ altogether. They are not "sent" to GitHub until you "push" them.)
 :::
 
 ::: notes
+**PURPOSE:** Synchronize local changes with GitHub
+
 -   After committing (once or several times), one must "Push" the changes to the
     repository. Also, at the end of a session it is best practice to "Push", so
     that we have a backup of the whole commit history in the cloud (i.e. GitHub)
@@ -672,7 +682,9 @@ altogether. They are not "sent" to GitHub until you "push" them.)
 (NEXT)
 
 -   In this case, the local repository is in sync with the remote, so it will
-    not make any new change.
+    not make any new changes.
+
+(The "Pull" command is only shown for drilling and getting used to it)
 :::
 
 ## DOs and DON'Ts in git {.smaller}
