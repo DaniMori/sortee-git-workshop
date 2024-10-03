@@ -2,7 +2,9 @@
 
 ## Pasting from Zoom may change double quotes
 
-## Log in to GitHub
+## Using the GitHub repository template
+
+## Logging in to GitHub
 
 ## Knitting "README.Rmd"
 
@@ -26,4 +28,3 @@ Backtrace:
 Quitting from lines 56-62 [software-versions] (README.Rmd)
 Ejecución interrumpida
 ```
-
