@@ -32,3 +32,6 @@
 .Rproj.user
 /dat/
 *.lnk
+
+# Mac-specific organiser file
+.DS_Store

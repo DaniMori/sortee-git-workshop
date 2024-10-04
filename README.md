@@ -22,37 +22,20 @@ template created by [Daniel Morillo](https://github.com/DaniMori) and
 licensed under the [Creative Commons Attribution 4.0 International
 license](https://creativecommons.org/licenses/by/4.0/).
 
-### Dataset [`dat/breslow_chatterjee_1999.csv`](dat/breslow_chatterjee_1999.csv)
+### Dataset [“dat/penguins.csv”](dat/penguins.csv)
 
-Dataset `nwtco` from the R [survival
-package](https://cran.r-project.org/package=survival) v3.5-5, originally
-from:
+Dataset `penguins` from the R [{palmerpenguins}
+package](https://cran.r-project.org/package=palmerpenguins) v0.1.1,
+originally from:
 
-<div id="refs" class="references csl-bib-body hanging-indent"
-entry-spacing="0">
-
-<div id="ref-breslow_design_1999" class="csl-entry">
-
-Breslow, N. E., and N. Chatterjee. 1999. “Design and Analysis of
-Two-Phase Studies with Binary Outcome Applied to Wilms Tumour
-Prognosis.” *Journal of the Royal Statistical Society: Series C (Applied
-Statistics)* 48 (4): 457–68. <https://doi.org/10.1111/1467-9876.00165>.
+<div id="refs">
 
 </div>
-
-</div>
-
-### Script [`src/Analysis.R`](src/Analysis.R)
-
-Adapted from the [`nwtco` help
-page](https://www.rdocumentation.org/packages/survival/versions/3.5-5/topics/nwtco)
-of the R [survival package](https://cran.r-project.org/package=survival)
-v3.5-5.
 
 ### Pictures
 
 Origin of all the image files attributed in the corresponding slides in
-[`output/slide-deck.qmd`](output/slide-deck.qmd).
+[“output/slide-deck.qmd”](output/slide-deck.qmd).
 
 # Project installation
 
@@ -105,28 +88,28 @@ box is:
 inside a cloud storage folder (e.g., Dropbox, OneDrive). Please note
 that GitHub serves the purpose of backing up the repository, so no cloud
 storage is necessary. Similarly, cloning the repository in a network
-folder may cause problems with the `renv` environment (see below); do it
+folder may cause problems with the {renv} environment (see below); do it
 at your own risk!
 
 After cloning the repository, the Rstudio project will open
 automatically in the Rstudio IDE. If it doesn’t, or you want to return
 later to the project in Rstudio, you can do so by double clicking on the
-file `rstudio_project.Rproj` that has been created in the project folder
+file “rstudio_project.Rproj” that has been created in the project folder
 when cloning the repository.
 
 **NOTE:** It is common practice to avoid using and versioning
-`.Rprofile` files. However, this project uses [package
-`renv`](https://cran.r-project.org/package=renv) to create a
-reproducible environment, which needs the `.Rprofile` file that lives in
+“.Rprofile” files. However, this project uses [package
+{renv}](https://cran.r-project.org/package=renv) to create a
+reproducible environment, which needs the “.Rprofile” file that lives in
 the root directory of the project. **Please DO NOT delete or edit this
-file**; it will install and activate the `renv` package and make it
+file**; it will install and activate the {renv} package and make it
 ready for restoring the environment.
 
 ## Restoring the environment
 
-The reproducible environment created by `renv` must be restored to
+The reproducible environment created by {renv} must be restored to
 install all the packages this project needs to be built properly. If
-`renv` does not initialize automatically (check the console for messages
+{renv} does not initialize automatically (check the console for messages
 about this), you will need to manually install the package first:
 
 ``` r
@@ -153,12 +136,8 @@ The file structure of this repository is as follows:
     |    |
     |    |--- minutes (To store meeting minutes)
     |
-    |--- notebooks    (Notebooks to explore data and test processes live here)
-    |
     |--- output       (Processing outputs; files must be individually "checked-in"
     |                 when necessary)
-    |
-    |--- R            (R functions created for this project live here)
     |
     |--- renv         (System library necesssary for `renv` to work. DON'T TOUCH)
     |
@@ -168,3 +147,77 @@ The file structure of this repository is as follows:
 
 Use the folders as indicated to store the different files and generate
 the outputs of the processes.
+
+# How to use this project
+
+The main file in this repository is, \<output/slide-deck.qmd\>, a
+[reveal.js](https://revealjs.com/) presentation rendered as the outcome
+of a [Quarto](https://quarto.org) document (learn more about the
+[Revealjs Quarto
+format](https://quarto.org/docs/presentations/revealjs/)).
+
+## Plugins
+
+The following two features are implemented in the presentation:
+*Multiplex mode*, and *Speaker view*.
+
+### Multiplex mode
+
+The rendered reveal.js output makes use of the
+[multiplex](https://revealjs.com/multiplex/) plugin, which allows the
+audience to follow the presentation locally on their computers, in sync
+with the host’s. This means that, when rendered,
+\<output/slide-deck.qmd\> produces two outputs:
+
+- “output/slide-deck-speaker.html”: This is the *speaker version*, the
+  one the host will need to use for presenting the workshop.
+
+- “output/slide-deck.html”: The version distributed to the audience. For
+  ease of use during the workshop, a pre-rendered version is linked in
+  the first slide (i.e., “Setup”) for the audience to have easier access
+  (if it does not work, it means the pre-rendered version is not
+  available anymore; in that case, the link can be changed to another
+  public one before rendering, if necessary).
+
+### Speaker view
+
+The speaker version of the rendered slide deck has a speaker view that
+allows the host to have an ancillary window with the peaker notes. The
+speaker view is known to work properly on Chrome 128, while it does not
+work in Firefox 130.
+
+## Rendering the slide deck
+
+If you want to use the multiplex mode, you will need to render the
+audience version and create a public shareable link with it, then render
+the presentation again to make sure the link in the “Setup” slide points
+correctly to it.
+
+Follow these steps to do so:
+
+1.  Render file “output/slide-deck.qmd”.
+
+2.  Host output “output/slide-deck.html” (the audience version) in a
+    cloud storage service (e.g., Dropbox, OneDrive, etc.).
+
+3.  Create a public link to share the audience version publicly.
+
+4.  Update slide “Setup” with your own link (in line 65).
+
+5.  Render “output/slide-deck.qmd” again.
+
+6.  Overwrite the publicly shared audience version in your cloud storage
+    service with the newly rendered “output/slide-deck.html”.
+
+7.  Open “output/slide-deck-speaker.html” in Google Chrome (recommended
+    browser for presenting the workshop; see section [Speaker
+    view](#speaker-view) above).
+
+8.  Browse to the “Setup” slide (the first after the title) and click on
+    the link to test the download of the audience version.
+
+9.  Download the audience version and open it in a new
+    window/tab/browser.
+
+10. Browse the speaker version and check that the audience version
+    automatically updates in sync with it.

@@ -9,23 +9,6 @@
     ]
   },
   "Packages": {
-    "Matrix": {
-      "Package": "Matrix",
-      "Version": "1.7-0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "grDevices",
-        "graphics",
-        "grid",
-        "lattice",
-        "methods",
-        "stats",
-        "utils"
-      ],
-      "Hash": "1920b2f11133b12350024297d8a4ff4a"
-    },
     "R6": {
       "Package": "R6",
       "Version": "2.5.1",
@@ -60,12 +43,26 @@
     "bit": {
       "Package": "bit",
       "Version": "4.5.0",
-      "Source": "Repository"
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "5dc7b2677d65d0e874fc4aaf0e879987"
     },
     "bit64": {
       "Package": "bit64",
       "Version": "4.5.2",
-      "Source": "Repository"
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "bit",
+        "methods",
+        "stats",
+        "utils"
+      ],
+      "Hash": "e84984bf5f12a18628d9a02322128dfd"
     },
     "bslib": {
       "Package": "bslib",
@@ -180,7 +177,12 @@
     "evaluate": {
       "Package": "evaluate",
       "Version": "1.0.0",
-      "Source": "Repository"
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "6b567375113ceb7d9f800de4dd42218e"
     },
     "fansi": {
       "Package": "fansi",
@@ -347,7 +349,12 @@
     "jsonlite": {
       "Package": "jsonlite",
       "Version": "1.8.9",
-      "Source": "Repository"
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "methods"
+      ],
+      "Hash": "4e993b65c2c3ffbffce7bb3e2c6f832b"
     },
     "knitr": {
       "Package": "knitr",
@@ -393,21 +400,6 @@
         "rlang"
       ],
       "Hash": "a3e051d405326b8b0012377434c62b37"
-    },
-    "lattice": {
-      "Package": "lattice",
-      "Version": "0.22-6",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "grDevices",
-        "graphics",
-        "grid",
-        "stats",
-        "utils"
-      ],
-      "Hash": "cc5ac1ba4c238c7ca9fa6a87ca11a7e2"
     },
     "lifecycle": {
       "Package": "lifecycle",
@@ -457,7 +449,7 @@
       "Package": "pak",
       "Version": "0.8.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "https://r-lib.github.io/p/pak/stable/win.binary/mingw32/x86_64",
       "Requirements": [
         "R",
         "tools",
@@ -532,7 +524,13 @@
     "ps": {
       "Package": "ps",
       "Version": "1.8.0",
-      "Source": "Repository"
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "utils"
+      ],
+      "Hash": "4b9c8485b0c7eecdf0a9ba5132a45576"
     },
     "purrr": {
       "Package": "purrr",
@@ -604,13 +602,13 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "1.0.7",
+      "Version": "1.0.9",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "utils"
       ],
-      "Hash": "397b7b2a265bc5a7a06852524dabae20"
+      "Hash": "ef233f0e9064fc88c898b340c9add5c2"
     },
     "rlang": {
       "Package": "rlang",
@@ -697,22 +695,6 @@
       ],
       "Hash": "960e2ae9e09656611e0b8214ad543207"
     },
-    "survival": {
-      "Package": "survival",
-      "Version": "3.7-0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "Matrix",
-        "R",
-        "graphics",
-        "methods",
-        "splines",
-        "stats",
-        "utils"
-      ],
-      "Hash": "5aaa9cbaf4aba20f8e06fdea1850a398"
-    },
     "tibble": {
       "Package": "tibble",
       "Version": "3.2.1",
@@ -774,7 +756,12 @@
     "tinytex": {
       "Package": "tinytex",
       "Version": "0.53",
-      "Source": "Repository"
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "xfun"
+      ],
+      "Hash": "9db859e8aabbb474293dde3097839420"
     },
     "tzdb": {
       "Package": "tzdb",
