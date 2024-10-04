@@ -61,9 +61,7 @@ knitr: true
 ::: nonincremental
 #### FOLLOW LOCALLY:
 
-<!-- TODO: Host version and create bit.ly short link -->
-
--   <https://bit.ly/follow-tmp>
+-   <https://osf.io/um53b>
 
 <br>
 
