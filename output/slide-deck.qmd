@@ -765,8 +765,7 @@ SHOULD NOT SPEND TOO MUCH TIME ON THIS
 <br>
 
 ::: nonincremental
--   Download <!-- TODO: Create bit.ly short link -->
-    <https://github.com/DaniMori/sortee-git-workshop/blob/feature/content-update/src/Analysis.R>
+-   Download <https://bit.ly/gitws-rscript>
 
 OR
 
@@ -795,8 +794,7 @@ Snapshot library: The new libraries will be added to the "renv.lock"
 <br>
 
 ::: nonincremental
--   Download <!-- TODO: Create bit.ly short link -->
-    <https://github.com/DaniMori/sortee-git-workshop/blob/feature/content-update/dat/penguins.csv>
+-   Download <https://bit.ly/gitws-dataset>
 
 OR
 
